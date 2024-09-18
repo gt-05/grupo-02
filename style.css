@@ -33,11 +33,6 @@ a {
     margin: 10px;
 }
 
-.menu{
-  display: flex;
-  /*justify-content: center;
-  align-items: center;*/
-}
 
 .menu-link:hover{
     color: #808080;
