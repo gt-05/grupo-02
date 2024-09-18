@@ -34,3 +34,7 @@ a {
   justfy-content: center;
   aligitems: center;
 }
+
+.menu-link:hover{
+    color: #808080;
+}
