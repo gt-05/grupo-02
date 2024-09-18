@@ -5,6 +5,7 @@
     font-style: normal;
     font: bold;
     font-weight: 500;
+    
 }
 
 ul {
@@ -54,3 +55,39 @@ a {
   .hero-p1 {
     font-size: 20px;
   }
+body{
+    background-color: #f4f4f4;
+}
+.cards{
+    background-color: white;
+    display: inline-block;
+    padding: 30px 50px;
+    width: 200px;
+    margin: 10px;
+    border-radius: 10px;
+}
+.big-card{
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+}
+.card-content{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.text{
+    display: inline-block;
+    font-size: 18px;
+    font: bold;
+}
+[class^="icone-"]{
+    display:inline-block;
+    width: 40px;
+    padding: 10px;
+}
+.icone-caminhao{
+    width: 65px;
+}
