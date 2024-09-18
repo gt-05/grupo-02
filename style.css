@@ -60,7 +60,7 @@ a {
     margin: 0;
 }
 body{
-    background-color: #e8e9ea99;
+    background-color: #f4f4f4;
 }
 .cards{
     background-color: white;
@@ -84,6 +84,8 @@ body{
 
 .text{
     display: inline-block;
+    font-size: 18px;
+    font: bold;
 }
 [class^="icone-"]{
     display:inline-block;
