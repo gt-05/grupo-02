@@ -91,3 +91,19 @@ body{
 .icone-caminhao{
     width: 65px;
 }
+
+#calc-frete{
+    display: flex;
+     justify-content: center;
+}
+
+#botao-cal-frete{ 
+    font-size:100%;
+    font-weight:600;
+    background-color:rgb(58, 58, 58);
+    color: white;
+    border-radius: 5px;
+    width: 225px;
+    height: 50px;
+  border: none;
+}
