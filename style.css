@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');   
+ 
+ *{
+    font-family: "Work Sans", sans-serif;
+    font-style: normal;
+    font: bold;
+    font-weight: 500;
+    
+}
+
+ul {
+    list-style: none;
+    align-items: center;
+    
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    padding: auto;
+    
+}
+
+#site-header {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.menu-item{
+    display: inline-block;
+    position: relative;
+    margin: 10px;
+}
+
+
+.menu-link:hover{
+    color: #808080;
+}
+
+#main {
+    text-align: center;
+    padding: 20px;
+    margin: 20px;
+     }
+  
+  .hero-h1 {
+    font-weight: bold;
+    margin: 10px;
+    padding: 10px;
+    font-size: 2em;
+  }
+  
+  .hero-p1 {
+    font-size: 20px;
+  }
+body{
+    background-color: #f4f4f4;
+}
+.cards{
+    background-color: white;
+    display: inline-block;
+    padding: 30px 50px;
+    width: 200px;
+    margin: 10px;
+    border-radius: 10px;
+}
+.big-card{
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+}
+.card-content{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.text{
+    display: inline-block;
+    font-size: 18px;
+    font: bold;
+}
+[class^="icone-"]{
+    display:inline-block;
+    width: 40px;
+    padding: 10px;
+}
+.icone-caminhao{
+    width: 65px;
+}
