@@ -35,8 +35,8 @@ a {
 
 .menu{
   display: flex;
-  justfy-content: center;
-  aligitems: center;
+  /*justify-content: center;
+  align-items: center;*/
 }
 
 .menu-link:hover{
@@ -47,9 +47,7 @@ a {
     text-align: center;
     padding: 20px;
     margin: 20px;
-    font-family:
-    color: rgb(145, 230, 50);
-  }
+     }
   
   .h1 {
     font-weight: bold;
