@@ -1,0 +1,36 @@
+*{
+    font-family: sans-serif;
+    box-sizing: border-box;
+    
+}
+ul {
+    list-style: none;
+    align-items: center;
+    
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    padding: auto;
+    
+}
+
+#site-header {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.menu-item{
+    display: inline-block;
+    position: relative;
+    margin: 10px;
+}
+
+.menu{
+  display: flex;
+  justfy-content: center;
+  aligitems: center;
+}
