@@ -1,8 +1,12 @@
-*{
-    font-family: sans-serif;
-    box-sizing: border-box;
-    
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');   
+ 
+ *{
+    font-family: "Work Sans", sans-serif;
+    font-style: normal;
+    font: bold;
+    font-weight: 500;
 }
+
 ul {
     list-style: none;
     align-items: center;
