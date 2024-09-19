@@ -117,3 +117,49 @@ body{
     padding: 20px;
     margin-top: 50px;
   }
+
+.frete-box{
+    display: inline-block;
+}
+.address{
+    display:inline-block;
+    padding: 10px;
+}
+.frete-options{
+    display: flex;
+    align-items: center;
+    background-color: white;
+    margin: 11px;
+    border-style: solid;
+    border-width: thin;
+    border-color: rgb(0, 0, 0, 0.1)
+}
+.items-frete{
+    display:inline-block;
+    padding: 5px 20px;;
+}
+.items-frete > p , .address > p{
+    margin: 0;
+}
+.frete-options-title, .total-price{
+    font-size:12px;
+    color: gray;
+}
+.frete-options-content{
+    font-weight: 600; 
+}
+.total-price{
+    color: rgb(172, 172, 172);
+    text-decoration: line-through;
+}
+.frete-options-content-price{
+    font-size: 20px;
+    font-weight: 600;
+}
+
+/* Deve ser removido após incluir o restante da página e reorganizar os itens */
+
+.frete-options-box{
+    display: flex;
+    justify-content: flex-end;
+}
