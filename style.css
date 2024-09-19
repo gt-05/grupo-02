@@ -5,6 +5,7 @@
     font-style: normal;
     font: bold;
     font-weight: 500;
+    box-sizing: border-box;
     
 }
 
@@ -164,4 +165,49 @@ body{
 .frete-options-box{
     display: flex;
     justify-content: flex-end;
+    width: 600px;
+}
+
+.line { 
+    display: block;
+}
+
+.calcular-frete {
+    width: 400px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+    border-radius: 8px;
+}
+
+.calcular-frete input {
+    width: 100%;
+    font-size: 20px;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+.calcular-frete label {
+  margin-bottom: 5px;
+  display: block;
+  font-weight: 700;
+}
+
+.calcular-frete .input-group {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 40px;
+}
+
+.calcular-frete button {
+    border: none;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+    width: 100%;
+    align-self: flex-end;
 }
