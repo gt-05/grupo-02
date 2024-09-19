@@ -108,3 +108,12 @@ body{
     border: none;
     cursor: pointer;
 }
+
+#container-rodape {  
+    width: 100%;
+    text-align: center;
+    color: white;
+    background-color: black;
+    padding: 20px;
+    margin-top: 50px;
+  }
