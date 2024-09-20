@@ -131,10 +131,13 @@ body{
     }
   
   .text-adress1 {
-    font-size: 0.9em
+    font-size: 0.9em;
     margin: 5px;
   }
-  
+#main{
+    height: 100vh;
+    margin:0;
+}
 
 /* estilização opções de frete */
 
@@ -190,7 +193,6 @@ body{
     margin-bottom: 150px;
     padding: 30px;
     width: 900px;
-    high: 10px;
     border-radius: 10px;
     display: flex;
     justify-content: center;
@@ -233,7 +235,6 @@ body{
     margin: auto;
   }
 
-<<<<<<< HEAD
 .line { 
     display: block;
 }
