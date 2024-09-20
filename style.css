@@ -4,8 +4,7 @@
     font-family: "Work Sans", sans-serif;
     font-style: normal;
     font: bold;
-    box-sizing: border-box;
-        
+    box-sizing: border-box;    
 }
 
 ul {
@@ -25,6 +24,8 @@ a {
     background-color: white;
     display: flex;
     justify-content: center;
+    margin: 10px;
+    font-weight: 700;
     
 }
 
@@ -295,5 +296,5 @@ body{
    width: 600px;
    height: auto;
    align-items: center;   
-   text-align: center;
+   text-align: centergit ;
 }
