@@ -4,9 +4,8 @@
     font-family: "Work Sans", sans-serif;
     font-style: normal;
     font: bold;
-    font-weight: 500;
     box-sizing: border-box;
-    
+        
 }
 
 ul {
@@ -121,22 +120,21 @@ body{
 
 /* estilizando bloco de endereço*/
 
-#adress {
-  
+#adress {  
     width: 600px;
-       float: right;
+    float: right;
     margin: 40px 400px;
     display: flex;
-    justify-content: space-between; 
-     
+    justify-content: space-between;     
   }
   
   .text-adress {
     font-size: 0.8em
-  }
+    }
   
   .text-adress1 {
     font-size: 0.9em
+    margin: 5px;
   }
   
 
@@ -145,10 +143,12 @@ body{
 .frete-box{
     display: inline-block;
 }
-.address{
-    display:inline-block;
+
+#address{
+    display:flex;
     padding: 10px;
 }
+
 .frete-options{
     display: flex;
     align-items: center;
@@ -181,13 +181,7 @@ body{
     font-weight: 600;
 }
 
-/* Deve ser removido após incluir o restante da página e reorganizar os itens */
 
-.frete-options-box{
-    display: flex;
-    justify-content: flex-end;
-    width: 600px;
-}
 
 /*estilização contato*/
 
@@ -198,7 +192,7 @@ body{
     margin-bottom: 150px;
     padding: 30px;
     width: 900px;
-    high: 10px;
+    height: 10px;
     border-radius: 10px;
     display: flex;
     justify-content: center;
@@ -253,6 +247,7 @@ body{
     row-gap: 40px;
     border-radius: 8px;    
     background-color: white;
+    margin-top: 100px;
 }
 
 .calcular-frete input {
@@ -289,5 +284,16 @@ body{
 .conteiner{
     display: flex;
     flex-direction: row-reverse;
-    justify-content: center;
+    justify-content: space-around;
+    
+
+}
+
+.bloco {
+   display: flex;
+   flex-direction: column;   
+   width: 600px;
+   height: auto;
+   align-items: center;   
+   text-align: center;
 }
