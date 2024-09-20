@@ -174,11 +174,13 @@ body{
 
 .calcular-frete {
     width: 400px;
+    height: 400px;
     padding: 30px;
     display: flex;
     flex-direction: column;
     row-gap: 40px;
-    border-radius: 8px;
+    border-radius: 8px;    
+    background-color: white;
 }
 
 .calcular-frete input {
@@ -203,11 +205,17 @@ body{
 
 .calcular-frete button {
     border: none;
-    background-color: #333;
+    background-color: rgb(58, 58, 58);
     color: #fff;
     padding: 10px;
     text-transform: uppercase;
     font-weight: bold;
     width: 100%;
     align-self: flex-end;
+}
+
+.conteiner{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
 }
