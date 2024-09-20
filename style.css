@@ -119,6 +119,27 @@ body{
     margin-top: 50px;
   }
 
+/* estilizando bloco de endereço*/
+
+#adress {
+  
+    width: 600px;
+       float: right;
+    margin: 40px 400px;
+    display: flex;
+    justify-content: space-between; 
+     
+  }
+  
+  .text-adress {
+    font-size: 0.8em
+  }
+  
+  .text-adress1 {
+    font-size: 0.9em
+  }
+  
+
 /* estilização opções de frete */
 
 .frete-box{
@@ -167,6 +188,57 @@ body{
     justify-content: flex-end;
     width: 600px;
 }
+
+/*estilização contato*/
+
+#box-contato {
+    background-color: #ffff;
+    margin: 0 auto;
+    margin-top: 150px;
+    margin-bottom: 150px;
+    padding: 30px;
+    width: 900px;
+    high: 10px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  #form-contato {
+    width: 100%;
+    margin: 20px;
+    padding: 10px;
+    font-size: 20px;
+    color: #2e2e2e;
+  }
+  
+  .input-contato {
+    width: 100%;
+    font-size: 20px;
+  }
+  
+  .textarea-mensagem {
+    width: 100%;
+    font-size: 20px;
+    padding: 10px;
+  }
+  
+  #buttom-contato {
+    background-color: #2e2e2e;
+    margin: 30px auto;
+    padding: 20px;
+    width: 200px;
+    border-radius: 10px;
+    display: flex;
+    color: #ffff;
+    font-size: 20px;
+   }
+  
+  .text-buttom {
+    color: #ffff;
+    font-size: 20px;
+    margin: auto;
+  }
 
 .line { 
     display: block;
