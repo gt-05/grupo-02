@@ -4,8 +4,9 @@
     font-family: "Work Sans", sans-serif;
     font-style: normal;
     font: bold;
-    font-weight: 500;
-    
+    margin: 0px;
+    padding: 0px;
+ 
 }
 
 ul {
@@ -22,7 +23,7 @@ a {
 }
 
 #site-header {
-    background-color: white;
+    background-color: #ffff;
     display: flex;
     justify-content: center;
     
@@ -31,7 +32,9 @@ a {
 .menu-item{
     display: inline-block;
     position: relative;
-    margin: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
 }
 
 
@@ -55,6 +58,7 @@ a {
   .hero-p1 {
     font-size: 20px;
   }
+
 body{
     background-color: #f4f4f4;
 }
@@ -109,21 +113,12 @@ body{
     cursor: pointer;
 }
 
-#container-rodape {  
-    width: 100%;
-    text-align: center;
-    color: white;
-    background-color: black;
-    padding: 20px;
-    margin-top: 50px;
-  }
-
 /* estilizando bloco de endereço*/
 
 #adress {
   
     width: 600px;
-       float: right;
+    float: right;
     margin: 40px 400px;
     display: flex;
     justify-content: space-between; 
@@ -196,7 +191,7 @@ body{
     margin-bottom: 150px;
     padding: 30px;
     width: 900px;
-    height: 10px;
+    high: 10px;
     border-radius: 10px;
     display: flex;
     justify-content: center;
@@ -213,20 +208,21 @@ body{
   .input-contato {
     width: 100%;
     font-size: 20px;
+    border: 1px solid black;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    resize: none;
+    
   }
   
-  .textarea-mensagem {
-    width: 100%;
-    font-size: 20px;
-    padding: 10px;
-  }
+  
   
   #buttom-contato {
     background-color: #2e2e2e;
     margin: 30px auto;
     padding: 20px;
     width: 200px;
-    border-radius: 10px;
+    border-radius: 20px;
     display: flex;
     color: #ffff;
     font-size: 20px;
@@ -236,4 +232,14 @@ body{
     color: #ffff;
     font-size: 20px;
     margin: auto;
+  }
+
+  /* estilizando bloco de endereço*/
+#container-rodape {  
+    width: 100%;
+    text-align: center;
+    color: white;
+    background-color: black;
+    padding: 20px;
+    margin-top: 50px;
   }
