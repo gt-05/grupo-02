@@ -4,8 +4,9 @@
     font-family: "Work Sans", sans-serif;
     font-style: normal;
     font: bold;
-    font-weight: 500;
-    
+    margin: 0px;
+    padding: 0px;
+ 
 }
 
 ul {
@@ -22,7 +23,7 @@ a {
 }
 
 #site-header {
-    background-color: white;
+    background-color: #ffff;
     display: flex;
     justify-content: center;
     
@@ -31,7 +32,9 @@ a {
 .menu-item{
     display: inline-block;
     position: relative;
-    margin: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
 }
 
 
@@ -55,6 +58,7 @@ a {
   .hero-p1 {
     font-size: 20px;
   }
+
 body{
     background-color: #f4f4f4;
 }
