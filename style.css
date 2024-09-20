@@ -23,7 +23,7 @@ a {
 }
 
 #site-header {
-    background-color: white;
+    background-color: #ffff;
     display: flex;
     justify-content: center;
     font-weight: 700;
@@ -35,7 +35,6 @@ a {
     position: relative;
     margin-top: 20px;
     margin-bottom: 20px;
-    
 }
 
 .menu-link{
@@ -117,18 +116,6 @@ body{
     cursor: pointer;
 }
 
-#container-rodape {  
-    width: 100%;
-    text-align: center;
-    color: white;
-    background-color: black;
-    padding: 20px;
-    margin-top: 50px;
-    position: absolute;
-    bottom: 0;
-  }
-  
-
 /* estilizando bloco de endereço*/
 
 #adress {  
@@ -203,7 +190,7 @@ body{
     margin-bottom: 150px;
     padding: 30px;
     width: 900px;
-    height: 10px;
+    high: 10px;
     border-radius: 10px;
     display: flex;
     justify-content: center;
@@ -220,20 +207,21 @@ body{
   .input-contato {
     width: 100%;
     font-size: 20px;
+    border: 1px solid black;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    resize: none;
+    
   }
   
-  .textarea-mensagem {
-    width: 100%;
-    font-size: 20px;
-    padding: 10px;
-  }
+  
   
   #buttom-contato {
     background-color: #2e2e2e;
     margin: 30px auto;
     padding: 20px;
     width: 200px;
-    border-radius: 10px;
+    border-radius: 20px;
     display: flex;
     color: #ffff;
     font-size: 20px;
@@ -245,6 +233,7 @@ body{
     margin: auto;
   }
 
+<<<<<<< HEAD
 .line { 
     display: block;
 }
@@ -308,3 +297,13 @@ body{
    align-items: center;   
    text-align: centergit ;
 }
+
+#container-rodape {  
+    width: 100%;
+    text-align: center;
+    color: white;
+    background-color: black;
+    padding: 20px;
+    margin-top: 100px;
+    
+  }
