@@ -1,64 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="Cabeçalho" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <header id="site-header">
-        <nav class="menu">
-            <ul>
-                <li class="menu-item">
-                    <a href="index.html" class="menu-link">Home</a>
-                </li>                
-                <li class="menu-item">
-                    <a href="calcular-frete.html" class="menu-link">Calcular Frete</a>                  
-                </li>
-                <li class="menu-item">
-                    <a href="contato.html" class="menu-link">Contato</a>
-                </li>
-            </ul>
-        </nav>
-    </header>
 
-     <!-- CRIANDO HERO -->
-     <main id="main">
-        <h1 class="hero-h1">Bem Vindo à Dummy Express</h1>
-        <p class="hero-p1">Seu parceiro confiável <br> para calcular o frete do seu pacote com rapidez e precisão</p>
-    <!--Cards-->
-    
-    <div class="big-card">
-        <div class="cards">
-            <div class="card-content">
-                <img class="icone-caminhao" src="https://static.vecteezy.com/ti/vetor-gratis/p1/22086869-ast-entrega-caminhao-icone-expressar-entrega-rapido-mover-linha-simbolo-em-branco-fundo-gratis-vetor.jpg">
-                <div class="text">Entrega Rápida</div>
+<body>
+
+
+
+    <main>
+        <header id="site-header">
+            <nav class="menu">
+                <ul>
+                    <li class="menu-item">
+                        <a href="index.html" class="menu-link">Home</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="calcular-frete.html" class="menu-link">Calcular Frete</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="contato.html" class="menu-link">Contato</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <!-- CRIANDO HERO -->
+        <div id="hero">
+            <h1 class="hero-h1">Bem Vindo à Dummy Express</h1>
+            <p class="hero-p1">Seu parceiro confiável <br> para calcular o frete do seu pacote com rapidez e precisão
+            </p>
+        </div>
+        <!--Cards-->
+
+        <div class="big-card">
+            <div class="cards">
+                <div class="card-content">
+                    <img class="icone-caminhao"
+                        src="https://static.vecteezy.com/ti/vetor-gratis/p1/22086869-ast-entrega-caminhao-icone-expressar-entrega-rapido-mover-linha-simbolo-em-branco-fundo-gratis-vetor.jpg">
+                    <div class="text">Entrega Rápida</div>
+                </div>
+            </div>
+            <div class="cards">
+                <div class="card-content">
+                    <img class="icone-calc" src="https://cdn-icons-png.flaticon.com/512/522/522506.png">
+                    <div class="text">Preços Transparentes</div>
+                </div>
+            </div>
+            <div class="cards">
+                <div class="card-content">
+                    <img class="icone-contact"
+                        src="https://img.icons8.com/?size=100&id=HLHS5ooCl9hH&format=png&color=000000">
+                    <div class="text">Suporte 24/7</div>
+                </div>
             </div>
         </div>
-        <div class="cards">
-            <div class="card-content">
-                <img class="icone-calc" src="https://cdn-icons-png.flaticon.com/512/522/522506.png">
-                <div class="text">Preços Transparentes</div>
-            </div>
+        <!--Botão Simular Calculo do frete-->
+        <div id="calc-frete">
+            <a href="calcular-frete.html">
+                <button id="botao-cal-frete" href="calcular-frete.html"> Simular Cálculo de Frete </button>
+            </a>
         </div>
-        <div class="cards">
-            <div class="card-content">
-                <img class="icone-contact" src="https://img.icons8.com/?size=100&id=HLHS5ooCl9hH&format=png&color=000000">
-                <div class="text">Suporte 24/7</div>
-            </div>
-        </div>
-    </div>  
-    <!--Botão Simular Calculo do frete-->
-    <div id="calc-frete">
-        <a href="calcular-frete.html" >
-            <button id="botao-cal-frete" > Simular Cálculo de Frete  </button>
-        </a> 
-    </div>
     </main>
     <footer id="container-rodape">
-        &copy; Copyright 2000-2024 DummyExpress 	
+        &copy; Copyright 2000-2024 DummyExpress
     </footer>
 </body>
-</html>
 
+</html>

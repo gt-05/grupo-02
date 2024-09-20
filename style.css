@@ -1,10 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');   
- 
- *{
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
     font-family: "Work Sans", sans-serif;
     font-style: normal;
     font: bold;
-    box-sizing: border-box;
     margin: 0px;
     padding: 0px;
 }
@@ -12,14 +11,14 @@
 ul {
     list-style: none;
     align-items: center;
-    
+
 }
 
 a {
     text-decoration: none;
     color: black;
     padding: auto;
-    
+
 }
 
 #site-header {
@@ -27,45 +26,47 @@ a {
     display: flex;
     justify-content: center;
     font-weight: 700;
-    
+    width:100%;
 }
 
-.menu-item{
+.menu-item {
     display: inline-block;
     position: relative;
     margin-top: 20px;
     margin-bottom: 20px;
 }
 
-.menu-link{
+.menu-link {
     margin: 20px;
 }
 
-.menu-link:hover{
+.menu-link:hover {
     color: #808080;
 }
 
-#main {
+
+#hero {
     text-align: center;
     padding: 20px;
     margin: 20px;
-     }
-  
-  .hero-h1 {
+}
+
+.hero-h1 {
     font-weight: bold;
     margin: 10px;
     padding: 10px;
     font-size: 2em;
-  }
-  
-  .hero-p1 {
-    font-size: 20px;
-  }
+}
 
-body{
+.hero-p1 {
+    font-size: 20px;
+}
+
+body {
     background-color: #f4f4f4;
 }
-.cards{
+
+.cards {
     background-color: white;
     display: inline-block;
     padding: 30px 50px;
@@ -73,41 +74,45 @@ body{
     margin: 10px;
     border-radius: 10px;
 }
-.big-card{
+
+.big-card {
     display: flex;
     justify-content: center;
     padding: 50px;
 }
-.card-content{
-    display:flex;
+
+.card-content {
+    display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
 
-.text{
+.text {
     display: inline-block;
     font-size: 18px;
     font: bold;
 }
-[class^="icone-"]{
-    display:inline-block;
+
+[class^="icone-"] {
+    display: inline-block;
     width: 40px;
     padding: 10px;
 }
-.icone-caminhao{
+
+.icone-caminhao {
     width: 65px;
 }
 
-#calc-frete{
+#calc-frete {
     display: flex;
-     justify-content: center;
+    justify-content: center;
 }
 
-#botao-cal-frete{ 
-    font-size:100%;
-    font-weight:600;
-    background-color:rgb(58, 58, 58);
+#botao-cal-frete {
+    font-size: 100%;
+    font-weight: 600;
+    background-color: rgb(58, 58, 58);
     color: white;
     border-radius: 5px;
     width: 225px;
@@ -118,39 +123,40 @@ body{
 
 /* estilizando bloco de endereço*/
 
-#adress {  
+#adress {
     width: 600px;
     float: right;
     margin: 40px 400px;
     display: flex;
-    justify-content: space-between;     
-  }
-  
-  .text-adress {
+    justify-content: space-between;
+}
+
+.text-adress {
     font-size: 0.8em
-    }
-  
-  .text-adress1 {
+}
+
+.text-adress1 {
     font-size: 0.9em;
     margin: 5px;
-  }
-#main{
-    height: 100vh;
-    margin:0;
+}
+
+main {
+    height: 100%;
+    margin: 0;
 }
 
 /* estilização opções de frete */
 
-.frete-box{
+.frete-box {
     display: inline-block;
 }
 
-#address{
-    display:flex;
+#address {
+    display: flex;
     padding: 10px;
 }
 
-.frete-options{
+.frete-options {
     display: flex;
     align-items: center;
     background-color: white;
@@ -159,25 +165,34 @@ body{
     border-width: thin;
     border-color: rgb(0, 0, 0, 0.1)
 }
-.items-frete{
-    display:inline-block;
-    padding: 5px 20px;;
+
+.items-frete {
+    display: inline-block;
+    padding: 5px 20px;
+    ;
 }
-.items-frete > p , .address > p{
+
+.items-frete>p,
+.address>p {
     margin: 0;
 }
-.frete-options-title, .total-price{
-    font-size:12px;
+
+.frete-options-title,
+.total-price {
+    font-size: 12px;
     color: gray;
 }
-.frete-options-content{
-    font-weight: 600; 
+
+.frete-options-content {
+    font-weight: 600;
 }
-.total-price{
+
+.total-price {
     color: rgb(172, 172, 172);
     text-decoration: line-through;
 }
-.frete-options-content-price{
+
+.frete-options-content-price {
     font-size: 20px;
     font-weight: 600;
 }
@@ -196,29 +211,29 @@ body{
     border-radius: 10px;
     display: flex;
     justify-content: center;
-  }
-  
-  #form-contato {
+}
+
+#form-contato {
     width: 100%;
     margin: 20px;
     padding: 10px;
     font-size: 20px;
     color: #2e2e2e;
-  }
-  
-  .input-contato {
+}
+
+.input-contato {
     width: 100%;
     font-size: 20px;
     border: 1px solid black;
     margin-top: 20px;
     margin-bottom: 20px;
     resize: none;
-    
-  }
-  
-  
-  
-  #buttom-contato {
+
+}
+
+
+
+#buttom-contato {
     background-color: #2e2e2e;
     margin: 30px auto;
     padding: 20px;
@@ -227,15 +242,15 @@ body{
     display: flex;
     color: #ffff;
     font-size: 20px;
-   }
-  
-  .text-buttom {
+}
+
+.text-buttom {
     color: #ffff;
     font-size: 20px;
     margin: auto;
-  }
+}
 
-.line { 
+.line {
     display: block;
 }
 
@@ -246,7 +261,7 @@ body{
     display: flex;
     flex-direction: column;
     row-gap: 40px;
-    border-radius: 8px;    
+    border-radius: 8px;
     background-color: white;
     margin-top: 100px;
 }
@@ -260,9 +275,9 @@ body{
 }
 
 .calcular-frete label {
-  margin-bottom: 5px;
-  display: block;
-  font-weight: 700;
+    margin-bottom: 5px;
+    display: block;
+    font-weight: 700;
 }
 
 .calcular-frete .input-group {
@@ -282,29 +297,26 @@ body{
     align-self: flex-end;
 }
 
-.conteiner{
+.conteiner {
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-around;
-    
-
 }
 
 .bloco {
-   display: flex;
-   flex-direction: column;   
-   width: 600px;
-   height: auto;
-   align-items: center;   
-   text-align: centergit ;
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    height: auto;
+    align-items: center;
+    text-align: centergit;
 }
 
-#container-rodape {  
+#container-rodape {
     width: 100%;
     text-align: center;
     color: white;
     background-color: black;
-    padding: 20px;
+    padding: 20px 0;
     margin-top: 100px;
-    
-  }
+}
