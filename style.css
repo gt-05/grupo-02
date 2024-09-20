@@ -109,21 +109,12 @@ body{
     cursor: pointer;
 }
 
-#container-rodape {  
-    width: 100%;
-    text-align: center;
-    color: white;
-    background-color: black;
-    padding: 20px;
-    margin-top: 50px;
-  }
-
 /* estilizando bloco de endereço*/
 
 #adress {
   
     width: 600px;
-       float: right;
+    float: right;
     margin: 40px 400px;
     display: flex;
     justify-content: space-between; 
@@ -237,4 +228,14 @@ body{
     color: #ffff;
     font-size: 20px;
     margin: auto;
+  }
+
+  /* estilizando bloco de endereço*/
+#container-rodape {  
+    width: 100%;
+    text-align: center;
+    color: white;
+    background-color: black;
+    padding: 20px;
+    margin-top: 50px;
   }
