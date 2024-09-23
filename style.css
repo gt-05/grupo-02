@@ -68,14 +68,16 @@ body{
 .cards{
     background-color: white;
     display: inline-block;
-    padding: 30px 50px;
-    width: 200px;
+    padding: 30px 0;
+    min-width: 100px;
+    width: 250px;
     margin: 10px;
     border-radius: 10px;
 }
 .big-card{
     display: flex;
     justify-content: center;
+    align-items: center;
     padding: 50px;
 }
 .card-content{
@@ -312,4 +314,10 @@ body{
     display: flex;
     flex-direction: column;
     height: 100vh;
+  }
+  @media (max-width: 425px){
+    .big-card{
+        display: flex;
+        flex-direction: column;
+    }
   }
