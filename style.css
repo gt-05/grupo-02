@@ -26,8 +26,7 @@ a {
     background-color: #ffff;
     display: flex;
     justify-content: center;
-    font-weight: 700;
-    
+    font-weight: 700;    
 }
 
 .menu-item{
@@ -49,6 +48,7 @@ a {
     text-align: center;
     padding: 20px;
     margin: 20px;
+    flex: 1;
      }
   
   .hero-h1 {
@@ -63,7 +63,7 @@ a {
   }
 
 body{
-    background-color: #f4f4f4;
+    background-color: #f4f4f4; 
 }
 .cards{
     background-color: white;
@@ -305,8 +305,11 @@ body{
     background-color: black;
     padding: 20px;
     margin-top: 100px;
-    position: fixed;
-    bottom: 0px;
-  }
-  
     
+  }
+
+  #Teste {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
