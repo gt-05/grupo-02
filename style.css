@@ -312,12 +312,12 @@ body{
     flex-direction: column;
     height: 100vh;
   }
-  @media (max-width: 425px){
+  @media (max-width: 426px){
     .big-card{
         display: flex;
         flex-direction: column;
     }
-    .box-contato {
-        width: 300px;
+    #box-contato{
+        width: 350px;
     }
   }
