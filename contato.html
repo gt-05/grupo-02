@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contato</title>
-    <link rel="stylesheet" href="style.css">    
+    <link rel="stylesheet" href="style.css"> 
+    <script src="https://cdn.tailwindcss.com"></script>   
 </head>
 <body>
     <div id="Teste">
@@ -23,22 +24,23 @@
             </ul>
         </nav>        
     </header>
+
     <!-- Criando pagina contato-->
-     <main id="main">
-    <div id="box-contato">
-        <form id="form-contato">
+     <main class="p-6 m-6 font-bold">
+    <div  class="bg-white w-4/5 my-40 mx-auto rounded-lg flex justify-center">
+        <form class="w-full m-6 text-x text-black">
         
         <label>Nome *</label>
-        <input type="text" class="input-contato">
+        <input type="text" class="w-full h-10 mb-6 text-xl border-2 border-black my-5">
         
         
         <label>Email *</label>
-        <input type="email" class="input-contato">
+        <input type="email" class="w-full h-10 mb-6 text-xl border-2 border-black my-5">
         
         <label>Mensagem *</label>
-        <textarea class="input-contato"></textarea>
+        <textarea class="w-full h-40 5 mb-6 text-xl border-2 border-black my-5 resize-none"></textarea>
         
-        <button id="buttom-contato"><h3 class="text-buttom">ENVIAR</h3></button>
+        <button class="bg-slate-600 mx-auto m-6 py-6 px-10 rounded-lg flex"><h3 class="text-white text-lg">ENVIAR</h3></button>
         </form> 
     </div>
     </main>     
