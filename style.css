@@ -320,6 +320,9 @@ body{
         display: flex;
         flex-direction: column;
     }
+    #box-contato{
+        width: 350px;
+    }
     
     .bloco {
         min-width: 100px;
