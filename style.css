@@ -30,7 +30,7 @@ a {
     
 }
 
-.menu-item{
+.menu-item {
     display: inline-block;
     position: relative;
     margin-top: 20px;
@@ -189,7 +189,7 @@ body{
     margin-top: 150px;
     margin-bottom: 150px;
     padding: 30px;
-    width: 700px;
+   /* width: 700px;*/
     high: 10px;
     border-radius: 10px;
     display: flex;
@@ -206,14 +206,13 @@ body{
   
   .input-contato {
     width: 100%;
-    font-size: 30px;
+    font-size: 20px;
     border: 1px solid black;
     margin-top: 20px;
     margin-bottom: 20px;
     resize: none;
     
   }
-  
   
   
   #buttom-contato {
