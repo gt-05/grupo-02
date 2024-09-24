@@ -156,7 +156,7 @@ body{
     margin: 11px;
     border-style: solid;
     border-width: thin;
-    border-color: rgb(0, 0, 0, 0.1)
+    border-color: rgba(7, 255, 23, 0.1)
 }
 .items-frete{
     display:inline-block;
@@ -192,7 +192,7 @@ body{
     margin-bottom: 150px;
     padding: 30px;
     width: 700px;
-    high: 10px;
+    height: 10px;
     border-radius: 10px;
     display: flex;
     justify-content: center;
@@ -320,4 +320,36 @@ body{
         display: flex;
         flex-direction: column;
     }
+    
+    .bloco {
+        min-width: 100px;
+        max-width: 300px;
+     }
+     #adress{
+        min-width: 100px;
+        max-width: 350px;
+        
+     }
+     .conteiner{
+         display: flex;    
+         flex-direction: column-reverse;
+         
+     }
+     .calcular-frete{
+        min-width: 100px;
+        max-width: 340px;
+     }
+    
+     .frete-options-box{
+        margin-left: 15%;
+        display:flex ;
+        flex-direction: column;
+     }
+     .frete-box{
+        width: 80%;
+     }
+     .frete-options{
+        width: 115%;
+     }
+    
   }
