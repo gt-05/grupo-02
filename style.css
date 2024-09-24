@@ -321,13 +321,3 @@ body{
     #box-contato{
         width: 350px;
     }
-    .bloco {
-       min-width: 100px;
-       max-width: 370px;
-    }
-    .conteiner{
-        display: block;
-        width: 300px;
-        flex: ;
-    }
-  }
