@@ -29,7 +29,7 @@ a {
     font-weight: 700;    
 }
 
-.menu-item{
+.menu-item {
     display: inline-block;
     position: relative;
     margin-top: 20px;
@@ -208,14 +208,13 @@ body{
   
   .input-contato {
     width: 100%;
-    font-size: 30px;
+    font-size: 20px;
     border: 1px solid black;
     margin-top: 20px;
     margin-bottom: 20px;
     resize: none;
     
   }
-  
   
   
   #buttom-contato {
