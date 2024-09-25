@@ -191,13 +191,8 @@ body{
     margin-top: 150px;
     margin-bottom: 150px;
     padding: 30px;
-<<<<<<< HEAD
-   /* width: 700px;*/
-    high: 10px;
-=======
     width: 700px;
     height: 10px;
->>>>>>> main
     border-radius: 10px;
     display: flex;
     justify-content: center;

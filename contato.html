@@ -4,43 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contato</title>
-    <link rel="stylesheet" href="style.css"> 
-    <script src="https://cdn.tailwindcss.com"></script>   
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    <div id="Teste">
-    <header id="site-header">
-        <nav class="menu">
-            <ul>
-                <li class="menu-item">
-                    <a href="index.html" class="menu-link">Home</a>
-                </li>                
-                <li class="menu-item">
-                    <a href="calcular-frete.html" class="menu-link">Calcular Frete</a>                  
-                </li>
-                <li class="menu-item">
-                    <a href="contato.html" class="menu-link">Contato</a>
-                </li>
-            </ul>
-        </nav>        
-    </header>
-
+<body class="bg-[#f4f4f4]">
+    <div class="flex flex-col h-screen">
+        <header  class="bg-white w-full flex justify-center font-bold">
+            <nav class="text-center p-0 m-0 flex-1">
+                <ul >
+                    <li class="inline-block relative my-5">
+                        <a href="index.html" class="m-5">Home</a>
+                    </li>                
+                    <li class="inline-block relative my-5">
+                        <a href="calcular-frete.html" class="m-5">Calcular Frete</a>                  
+                    </li>
+                    <li class="inline-block relative my-5">
+                        <a href="contato.html" class="m-5">Contato</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
     <!-- Criando pagina contato-->
-     <main class="p-6 m-6 font-bold">
-    <div  class="bg-white w-4/5 my-40 mx-auto rounded-lg flex justify-center">
-        <form class="w-full m-6 text-x text-black">
+     <main id="main">
+    <div id="box-contato">
+        <form id="form-contato">
         
         <label>Nome *</label>
-        <input type="text" class="w-full h-10 mb-6 text-xl border-2 border-black my-5">
+        <input type="text" class="input-contato">
         
         
         <label>Email *</label>
-        <input type="email" class="w-full h-10 mb-6 text-xl border-2 border-black my-5">
+        <input type="email" class="input-contato">
         
         <label>Mensagem *</label>
-        <textarea class="w-full h-40 5 mb-6 text-xl border-2 border-black my-5 resize-none"></textarea>
+        <textarea class="input-contato"></textarea>
         
-        <button class="bg-slate-600 mx-auto m-6 py-6 px-10 rounded-lg flex"><h3 class="text-white text-lg">ENVIAR</h3></button>
+        <button id="buttom-contato"><h3 class="text-buttom">ENVIAR</h3></button>
         </form> 
     </div>
     </main>     
