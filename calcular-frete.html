@@ -40,11 +40,11 @@
             <div class="w-[600px] float-right mt-10 mr-[400px] flex justify-between">
                 <div>
                     <h5 class="text-[0.8em]">Origem</h5>
-                    <p class="text-[0.9em] m-[5px]">Rua XYZ, Centro, Fortaleza, Ceará, 000000</p>
+                    <p class="text-[0.9em] m-[5px]" id="endereco-origem">Rua XYZ, Centro, Fortaleza, Ceará, 000000</p>
                 </div>
                 <div>
                     <h5 class="text-[0.8em]">Destino</h5>
-                    <p class="text-[0.9em] m-[5px]">Rua XYZ, Centro, Fortaleza, Ceará, 000000</p>
+                    <p class="text-[0.9em] m-[5px]" id="endereco-destino">Rua XYZ, Centro, Fortaleza, Ceará, 000000</p>
                 </div>
             </div>
 
@@ -201,25 +201,25 @@
                 </ul>
                 </div>
         </div>
-        <form class="w-[400px] h-[450px] p-8 flex flex-col gap-10 rounded-lg bg-white mt-24">
+        <form class="w-[400px] h-[450px] p-8 flex flex-col gap-10 rounded-lg bg-white mt-24" id="calcular-fret">
             <div>
-              <label class="mb-1 block font-bold">Cep origem</label>
-              <input type="text" class="w-full text-lg p-2 rounded border border-gray-300" />
+              <label class="mb-1 block font-bold">Cep origem*</label>
+              <input type="text" class="w-full text-lg p-2 rounded border border-gray-300" id="cep-origem"/>
             </div>
           
             <div>
-              <label class="mb-1 block font-bold">Cep destino</label>
-              <input type="text" class="w-full text-lg p-2 rounded border border-gray-300" />
+              <label class="mb-1 block font-bold">Cep destino*</label>
+              <input type="text" class="w-full text-lg p-2 rounded border border-gray-300" id="cep-destino"/>
             </div>
           
             <div class="flex justify-between gap-10">
               <div>
                 <label class="mb-1 block font-bold">Peso</label>
-                <input type="text" class="w-full text-lg p-2 rounded border border-gray-300" />
+                <input type="text" class="w-full text-lg p-2 rounded border border-gray-300" id="peso"/>
               </div>
               <div>
                 <label class="mb-1 block font-bold">Quantidade</label>
-                <input type="text" class="w-full text-lg p-2 rounded border border-gray-300" />
+                <input type="text" class="w-full text-lg p-2 rounded border border-gray-300" id="quantidade"/>
               </div>
             </div>
           
@@ -228,5 +228,11 @@
         </div>
         
     </main>
+
+    <script src="js/main.js" type="module"></script>
+
+    <footer class="w-ful text-center text-white bg-black p-5 mt-24">
+        &copy; Copyright 2000-2024 DummyExpress 	
+</footer>
 </body>
 </html>
