@@ -4,13 +4,13 @@
         "postCodeEnd": "63999999",
         "services": [
         {
-            "service": "Basic",
+            "name": "Basic",
             "price": 10.5,
             "priceWithDiscount": 0,
             "days": 10
         },
         {
-            "service": "Premium",
+            "name": "Premium",
             "price": 50.75,
             "priceWithDiscount": 0,
             "days": 2
