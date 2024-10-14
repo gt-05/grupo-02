@@ -1,11 +1,25 @@
-import img from "../assets/images/shoe.svg"
-function ProductListing(){
-    
-    return(
-    <>
-    <h2>Produtos em alta</h2>
-    <div><img src= {img}/></div>
-    </>
+import ProductCard from "./ProductCard.jsx"
+import ProductListingHeader from "./ProductListingHeader.jsx"
+
+function ProductListing() {
+    return (
+        <>
+            <div className="container">
+                <div className="inner-container">
+                    <ProductListingHeader />
+                    <div className="cards">
+                        <ProductCard />
+                        <ProductCard />
+                        <ProductCard />
+                        <ProductCard />
+                        <ProductCard />
+                        <ProductCard />
+                        <ProductCard />
+                        <ProductCard />
+                    </div>
+                </div>
+            </div>
+        </>
     )
 }
 
