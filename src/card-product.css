@@ -7,22 +7,22 @@ body{
 }
 .cards{
     display: grid;
-    grid-template-columns: 292px 292px 292px 292px;
+    grid-template-columns: 18.25em 18.25em 18.25em 18.25em;
     gap: 20px;
 }
 .card{
-    width: 292px;
+    width: 18.25em;
 }
 .card-product{
     padding-top: 20px;
     background-color: white;
-    width: 292px;
+    width: 18.25em;
     height: 301px;
     position: relative;
 }
 .card-product-text{
     margin-left: 20px;
-    width: 95px;
+    width: 5.94em;
     padding: 5px;
     background-color: #E7FF86;
     border-radius: 20px;
@@ -30,12 +30,11 @@ body{
     font-weight: 700;
 }
 .card-product-image{
-    width: 248px;
-    scale: 1.15;
+    max-width: 100%;
     top: 135px;
 }
 .card-footer{
-    width: 292px;
+    max-width: 18.25em;
 }
 .product{
     font-size: 12px;
@@ -65,7 +64,7 @@ body{
     padding-bottom: 20px;
 }
 .inner-container{
-    width: 1228px;
+    width: 76.75em;
     justify-content: center;
     display: flex;
     flex-direction: column;
@@ -73,6 +72,7 @@ body{
 .container{
     justify-content: center;
     display: flex;
+    min-width: 600px;
 }
 .beginning{
     color: #474747;
@@ -84,4 +84,24 @@ body{
 }
 .arrow{
     margin-left: 10px;
+}
+@media screen and (max-width: 76.75em){
+    .cards{
+        display: grid;
+        grid-template-columns: 18.25em 18.25em 18.25em;
+        gap: 10px;
+    }
+    .card{
+        width: 18.25em;
+    }
+}
+@media screen and (max-width: 56.25em){
+    .cards{
+        display: grid;
+        grid-template-columns: 18.25em 18.25em;
+        gap: 10px;
+    }
+    .card{
+        width: 18.25em;
+    }
 }
