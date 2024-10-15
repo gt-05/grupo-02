@@ -50,7 +50,7 @@ const Footer = () => {
 
       {/* Rodapé com direitos autorais */}
       <div className="w-full text-center mt-8 border-t border-gray-700 pt-4">
-        <p className="text-gray-400">&copy; 2022 Digital College</p>
+        <p className="text-gray-400">&copy; 2022 Digital College.</p>
       </div>
     </footer>
   );
