@@ -7,7 +7,7 @@ function App() {
     <>
       <Gallery/>
      
-      
+      <ProductListing />
     </>
   );
 }

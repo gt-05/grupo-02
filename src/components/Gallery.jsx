@@ -19,11 +19,11 @@ function Gallery(){
         });
       }, []);
     return(
-        <div className="w-full relative">
+        <div className="w-full relative border border-black widht w-[1000px]">
         <div className="swiper default-carousel swiper-container">
         <div className="swiper-wrapper">
          <div className="swiper-slide">
-           <div className="bg-indigo-50 rounded-2xl h-96 flex justify-center items-center ">
+           <div className="bg-indigo-50 rounded-2xl h-96 flex justify-center items-center">
            <div style={{ maxWidth: '300px' }}>
                         <h2>Melhores ofertas personalizadas</h2>
                         <h3>Queima de estoque Nike 🔥</h3>
