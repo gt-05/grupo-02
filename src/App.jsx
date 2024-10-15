@@ -6,9 +6,9 @@ function App() {
 
   return (
     <>
-    <div className=" w-full h-48 bg-white " >
+    
       <Header/>
-    </div>
+    
       <Gallery/>
      
       <ProductListing />
