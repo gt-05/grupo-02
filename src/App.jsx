@@ -34,11 +34,7 @@ function App() {
     <a href="#" onClick={event => changepage('pagina3')}>pagina3</a>
     </div>
     </>
-
-
   );
 }
 
 export default App;
-
-
