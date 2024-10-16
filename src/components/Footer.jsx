@@ -3,12 +3,12 @@ import logo from '../assets/images/logo.footer.svg';
 import midias from '../assets/images/midias.svg';
 const Footer = () => {
   return (
-    <footer className="bg-gray-900 text-white p-8 flex flex-wrap justify-between">
+    <footer className="bg-gray-900 text-white p-8 flex flex-wrap justify-around">
       {/* Logo e descrição */}
-      <div className="mb-8 md:mb-0">
-        <img src={logo} alt="Drip Store Logo" className="w-24 mb-4" />
-        <p className="text-gray-400 mb-4">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.
+      <div className="mb-8 md:mb-0 w-80">
+        <img src={logo} alt="Drip Store Logo" className="w-24 mb-4 w-64" />
+        <p className="text-gray-400 mb-4 mt-4">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolor.
         </p>
         <div className="flex space-x-4">
           {/* Ícones de mídias sociais */}
@@ -42,7 +42,7 @@ const Footer = () => {
       </div>
 
       {/* Contato */}
-      <div className="mb-8 md:mb-0">
+      <div className="mb-8 md:mb-0 w-64">
         <h4 className="text-xl font-semibold mb-2">Contato</h4>
         <p className="text-gray-400">Av. Santos Dumont, 1510 - 1 andar - Aldeota, Fortaleza - CE, 60150-161</p>
         <p className="text-gray-400">(85) 3051-3411</p>
