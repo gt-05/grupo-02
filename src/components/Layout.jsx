@@ -1,5 +1,5 @@
 import Header from "./Header";
-//import footer from
+import footer from "./Footer"
 
 export default function Layout(props) {
     return (
