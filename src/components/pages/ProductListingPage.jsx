@@ -1,6 +1,7 @@
 import ProductListing from "../ProductListing.jsx"
 import Header from '../Header.jsx'
 import Section from "../section.jsx";
+import Footer from "../Footer.jsx";
 
 export default function ProductListingPage() {
     return (
@@ -18,6 +19,7 @@ export default function ProductListingPage() {
       }>
       <ProductListing />
       </Section>
+      <Footer/>
     </>
     )
 }
