@@ -1,21 +1,19 @@
-import Gallery from "./components/Gallery.jsx"
-import ProductListing from "./components/ProductListing.jsx"
-import Footer from "./components/Footer.jsx"
-import Header from './components/Header.jsx'
+import ProductListingPage from "./components/pages/ProductListingPage.jsx"
+import Home from "./components/pages/Home.jsx"
+
 
 function App() {
 
   return (
     <>
-    
-      <Header/>
-    
-      <Gallery/>
-     
-      <ProductListing />
-      <Footer />
+    <Home/>
+   
+      
     </>
   );
 }
 
 export default App;
+
+
+//<ProductListingPage/>
