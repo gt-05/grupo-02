@@ -1,5 +1,6 @@
 import ProductListingPage from "./components/pages/ProductListingPage.jsx"
 import Home from "./components/pages/Home.jsx"
+import ProductViewPage from "./components/pages/ProductViewPage.jsx"
 import { useState } from "react";
 
 
@@ -15,7 +16,7 @@ function App() {
   }
 
   if (page === "pagina3") {
-    return <h1>pagina3</h1>
+    return <h1><ProductViewPage/></h1>
   }
 
   function changepage(page) {
