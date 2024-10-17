@@ -10,7 +10,7 @@ export default function Home() {
         <Layout className="flex flex-col min-h-screen">
             <Gallery />
             <Colecao />
-            <Section
+            <Section 
                 title="Produtos em Alta"
                 titleAlign="left"
                 link={{
@@ -18,7 +18,7 @@ export default function Home() {
                     href: "https://redirect.link"
                 }}
             >
-                <ProductListing />
+                <ProductListing / >
             </Section>
             <Laye />
         </Layout>
