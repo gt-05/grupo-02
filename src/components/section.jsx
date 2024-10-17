@@ -14,8 +14,15 @@ export default function Section(props) {
        </div>
        )}
        </div>
+       
        {props.children}
        </>
    )
+<<<<<<< HEAD
+}
+
+//
+=======
    
 }
+>>>>>>> main
