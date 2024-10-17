@@ -19,10 +19,10 @@ function Header (){
             </div>
         <   div className="pl-2 pt-14">
                 <nav className=" flex space-x-6">
-                    <a className="font-bold underline text-[#C92071]" href="/">Home</a>
-                    <a href="/products">Produtos</a>
-                    <a href="#">Categorias</a>
-                    <a href="#">Meus Pedidos</a>
+                    <a className="text-normal hover:font-bold hover:underline hover:text-[#C92071]" href="/">Home</a>
+                    <a className="text-normal hover:font-bold hover:underline hover:text-[#C92071]" href="/products">Produtos</a>
+                    <a className="text-normal hover:font-bold hover:underline hover:text-[#C92071]" href="#">Categorias</a>
+                    <a className="text-normal hover:font-bold hover:underline hover:text-[#C92071]" href="#">Meus Pedidos</a>
                 </nav>
             </div>
         </div>
