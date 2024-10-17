@@ -1,7 +1,7 @@
-import ProductListing from "../ProductListing.jsx"
-import Header from '../Header.jsx'
-import Section from "../section.jsx";
-import Footer from "../Footer.jsx";
+import ProductListing from "../components/ProductListing.jsx"
+import Header from '../components/Header.jsx'
+import Section from "../components/section.jsx";
+import Footer from "../components/Footer.jsx";
 
 export default function ProductListingPage() {
     return (

@@ -11,7 +11,7 @@ export default function Home() {
         <>
         <Header/>
         <Gallery/>
-        <img src={Group 53592}/>
+        <img src={Group}/>
         <Section
         title="Produtos em Alta"
         titleAlign="left"
