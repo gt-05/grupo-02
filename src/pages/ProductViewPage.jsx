@@ -8,7 +8,7 @@ import Layout from "../components/Layout.jsx";
 
 export default function ProductViewPage() {
     return (
-        <Layout>   
+        <Layout className="flex flex-col min-h-screen">   
         <MenuNavegaca/>     
         <Gallery2/>
       <Section
