@@ -1,64 +1,64 @@
-import React, { useEffect } from 'react';
-import air from "../assets/images/air.svg"
+import {useState} from 'react';
 
-       
 
-function Gallery(){
-    
-    useEffect(() => {
-        var swiper = new Swiper(".default-carousel", {
-          loop: true,
-          pagination: {
-            el: ".swiper-pagination",
-            clickable: true,
-          },
-          navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-          },
-        });
-      }, []);
-    return(
-        <div className="w-full relative border border-black widht w-[1000px]">
-        <div className="swiper default-carousel swiper-container">
-        <div className="swiper-wrapper">
-         <div className="swiper-slide">
-           <div className="bg-indigo-50 rounded-2xl h-96 flex justify-center items-center">
-           <div style={{ maxWidth: '300px' }}>
-                        <h2>Melhores ofertas personalizadas</h2>
-                        <h3>Queima de estoque Nike 🔥</h3>
-                        <p>
-                            Consequat culpa exercitation mollit nisi excepteur do do tempor
-                            laboris eiusmod irure consectetur.
-                        </p>
-                    </div>
-             <img src={air}/>
-           </div>
-         </div>
-         <div className="swiper-slide">
-           <div className="bg-indigo-50 rounded-2xl h-96 flex justify-center items-center">
-             <img src={air}/> 
-           </div>
-         </div>
-         <div className="swiper-slide">
-           <div className="bg-indigo-50 rounded-2xl h-96 flex justify-center items-center">
-             <img src={air}/>
-           </div>
-         </div>
-        </div>
-        <div className="flex items-center gap-8 lg:justify-start justify-center">
-        <button id="slider-button-left" className="swiper-button-prev group !p-2 flex justify-center items-center border border-solid border-indigo-600 !w-12 !h-12 transition-all duration-500 rounded-full !top-2/4 !-translate-y-8 !left-5 hover:bg-indigo-600 " data-carousel-prev>
-         
-       </button>
-       <button id="slider-button-right" className="swiper-button-next group !p-2 flex justify-center items-center border border-solid border-indigo-600 !w-12 !h-12 transition-all duration-500 rounded-full !top-2/4 !-translate-y-8  !right-5 hover:bg-indigo-600" data-carousel-next>
-         
-       </button>
-        </div>
-        <div className="swiper-pagination"></div>
-        </div>
-        </div>
-)
+export default function Gallery() {
+
+	const [current, setCurrent] = useState(0);
+
+	let css = {
+		transform: `translateX(-${current}%)`
+	}
+
+	let imgs = [
+		{ src: "https://raw.githubusercontent.com/digitalcollegebr/projeto-digital-store/refs/heads/main/public/home-slide-4.jpeg" },
+		{ src: "https://raw.githubusercontent.com/digitalcollegebr/projeto-digital-store/refs/heads/main/public/home-slide-5.jpeg" },
+		{ src: "https://raw.githubusercontent.com/digitalcollegebr/projeto-digital-store/refs/heads/main/public/home-slide-6.jpeg" },
+		{ src: "https://raw.githubusercontent.com/digitalcollegebr/projeto-digital-store/refs/heads/main/public/home-slide-7.jpeg" },
+	];
+
+	function handlerSlide(direction) {
+		
+		if (direction === 'next') {
+			let position = current + 100;
+			setCurrent(position > (imgs.length-1)*100 ? 0 : position);
+		}
+
+		if (direction === 'prev') {
+			let position = current - 100;
+			setCurrent(position < 0 ? (imgs.length - 1) * 100 : position);
+		}
+	}
+
+	let tagsImg = imgs.map(function (img) {
+		return (
+			<div class="slide min-w-full">
+				<img class="w-full h-full" src={img.src} />
+			</div>
+		)
+	});
+
+
+	return (
+		<div className="gallery max-w-[1440px] max-h-[681px] m-auto">
+			<div className="slider relative overflow-hidden">
+				<div 
+					className="slides flex ease-in-out duration-500"
+					style={css}>
+					{tagsImg}
+				</div>
+				<span 
+					className="absolute top-1/2 cursor-pointer" 
+					id="prev" 
+					onClick={event => handlerSlide('prev')}>
+					<img src="/src/assets/icons/prev.svg" />
+				</span>
+				<span 
+					className="absolute top-1/2 cursor-pointer right-0" 
+					id="next"
+					onClick={event => handlerSlide('next')}>
+					<img src="/src/assets/icons/next.svg" />
+				</span>
+			</div>
+		</div>
+	);
 }
-
-export default Gallery
-
