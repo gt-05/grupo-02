@@ -19,8 +19,8 @@ function Header (){
             </div>
         <   div className="pl-2 pt-14">
                 <nav className=" flex space-x-6">
-                    <a className="font-bold underline text-[#C92071]" href="#">Home</a>
-                    <a href="#">Produtos</a>
+                    <a className="font-bold underline text-[#C92071]" href="/">Home</a>
+                    <a href="/products">Produtos</a>
                     <a href="#">Categorias</a>
                     <a href="#">Meus Pedidos</a>
                 </nav>
