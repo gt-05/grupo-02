@@ -31,8 +31,8 @@ export default function Gallery() {
 
 	let tagsImg = imgs.map(function (img) {
 		return (
-			<div class="slide min-w-full">
-				<img class="w-full h-full" src={img.src} />
+			<div className="slide min-w-full">
+				<img className="w-full h-full" src={img.src} />
 			</div>
 		)
 	});
@@ -41,7 +41,7 @@ export default function Gallery() {
 	return (
 		<div className="gallery max-w-[1440px] max-h-[681px] m-auto">
 			<div className="slider relative overflow-hidden">
-				<div 
+				<div
 					className="slides flex ease-in-out duration-500"
 					style={css}>
 					{tagsImg}

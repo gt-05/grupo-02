@@ -8,7 +8,7 @@ export default function ProductViewPage() {
     return (
         <>
         <Header/>
-          
+        <Gallery/>
       <Section
       title="Produtos em Alta"
       titleAlign="left"
