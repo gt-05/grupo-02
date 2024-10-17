@@ -1,13 +1,13 @@
 import ProductListing from "../components/ProductListing.jsx"
 import Gallery from "../components/Gallery.jsx"
-import Header from '../components/Header.jsx'
+
 import Section from "../components/section.jsx";
-import Footer from "../components/Footer.jsx"
+
+import Layout from "../components/Layout.jsx";
 
 export default function ProductViewPage() {
     return (
-        <>
-        <Header/>
+        <Layout>        
         <Gallery/>
       <Section
       title="Produtos em Alta"
@@ -20,7 +20,6 @@ export default function ProductViewPage() {
       }>
       <ProductListing />
       </Section>
-      <Footer/>
-    </>
+    </Layout>
     )
 }

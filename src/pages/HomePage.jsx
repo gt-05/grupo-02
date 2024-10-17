@@ -1,15 +1,12 @@
 import ProductListing from "../components/ProductListing.jsx"
 import Gallery from "../components/Gallery.jsx"
-import Header from '../components/Header.jsx'
 import Section from "../components/section.jsx";
-import Footer from "../components/Footer.jsx"
 import Group from "../assets/images/Group.png"
-//import Layout from "../Layout.jsx"
+import Layout from "../components/Layout.jsx"
 
 export default function Home() {
     return (
-        <>
-        <Header/>
+        <Layout>
         <Gallery/>
         <img src={Group}/>
         <Section
@@ -22,8 +19,7 @@ export default function Home() {
             }
         }>
         <ProductListing />
-        </Section>
-        <Footer/>
-    </>
+        </Section>        
+    </Layout>
     )
 }
