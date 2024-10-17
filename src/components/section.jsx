@@ -18,11 +18,5 @@ export default function Section(props) {
        {props.children}
        </>
    )
-<<<<<<< HEAD
-}
-
-//
-=======
    
 }
->>>>>>> main
