@@ -7,7 +7,7 @@ import Colecao from "../components/ColecaoDestaque.jsx";
 
 export default function Home() {
     return (
-        <Layout>
+        <Layout className="flex flex-col min-h-screen">
             <Gallery />
             <Colecao />
             <Section

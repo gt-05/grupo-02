@@ -1,12 +1,12 @@
 import ProductListing from "../components/ProductListing.jsx"
-import Header from '../components/Header.jsx'
+
 import Section from "../components/section.jsx";
-import Footer from "../components/Footer.jsx";
+
 import Layout from "../components/Layout.jsx";
 
 export default function ProductListingPage() {
     return (
-        <Layout>
+        <Layout className="flex flex-col min-h-screen">
         
           
       <Section
@@ -20,7 +20,7 @@ export default function ProductListingPage() {
       }>
       <ProductListing />
       </Section>
-      <Footer/>
+      
     </Layout>
     )
 }

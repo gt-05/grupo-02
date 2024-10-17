@@ -3,7 +3,7 @@ import logo from '../assets/images/logo.footer.svg';
 import midias from '../assets/images/midias.svg';
 const Footer = () => {
   return (
-    <footer className="bg-gray-900 text-white p-8 flex flex-wrap justify-around">
+    <footer className="bg-gray-900 text-white p-8 flex flex-wrap justify-around w-ful text-center text-white bg-black p-5 mt-24">
       {/* Logo e descrição */}
       <div className="mb-8 md:mb-0 w-80">
         <img src={logo} alt="Drip Store Logo" className="w-24 mb-4 w-64" />
