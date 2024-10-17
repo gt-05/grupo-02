@@ -7,7 +7,7 @@ import Footer from "../components/Footer.jsx"
 export default function ProductViewPage() {
     return (
         <>
-        <Header/>
+        
           
       <Section
       title="Produtos em Alta"
@@ -20,7 +20,7 @@ export default function ProductViewPage() {
       }>
       <ProductListing />
       </Section>
-      <Footer/>
+      
     </>
     )
 }
