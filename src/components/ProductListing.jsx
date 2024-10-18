@@ -2,10 +2,10 @@ import ProductCard from "./ProductCard.jsx";
 
 function ProductListing() {
     return (
-        <div className="flex justify-center items-center min-h-screen">
-            <div className="inner-container flex flex-wrap justify-center">
-                <div className="cards flex flex-wrap justify-center">
-                    <ProductCard />
+        <div className="max-w-[1228px] flex justify-center items-center">
+            <div className="flex flex-wrap justify-center">
+                <div className="flex flex-wrap justify-center gap-5">
+                    <ProductCard discountTag='30%' />
                     <ProductCard />
                     <ProductCard />
                     <ProductCard />
