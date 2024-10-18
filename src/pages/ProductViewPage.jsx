@@ -6,11 +6,14 @@ import Section from "../components/section.jsx";
 
 import Layout from "../components/Layout.jsx";
 
+import BuyBox from "../components/BuyBox.jsx";
+
 export default function ProductViewPage() {
     return (
         <Layout className="flex flex-col min-h-screen">   
         <MenuNavegaca/>     
         <Gallery2/>
+        <BuyBox/>
       <Section
       title="Produtos em Alta"
       titleAlign="left"
