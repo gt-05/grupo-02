@@ -4,11 +4,13 @@ import Laye from "../components/Laye.jsx";
 import ProductListing from "../components/ProductListing.jsx";
 import Section from "../components/section.jsx";
 import Colecao from "../components/ColecaoDestaque.jsx";
+import CardMine from "../components/Colecao.jsx"
 
 export default function Home() {
     return (
-        <Layout className="flex flex-col min-h-screen">
+        <Layout >
             <Gallery />
+            <CardMine/>
             <Colecao />
             <Section 
                 title="Produtos em Alta"
@@ -18,7 +20,7 @@ export default function Home() {
                     href: "https://redirect.link"
                 }}
             >
-                <ProductListing / >
+                <ProductListing />
             </Section>
             <Laye />
         </Layout>
