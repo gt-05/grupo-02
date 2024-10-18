@@ -1,15 +1,17 @@
 function ProductCheckBox(){
     return (
         <>
-        <div className=" pl-4 border-4 border-rose-600 w-72 h-full "> {/* Div Principal engloba tudo */}
-            <div> {/* Div do nome "Filtrar por" */}
+        <div className=" pl-6 ml-20 mr-10  bg-white w-72 h-full rounded"> {/* Div Principal engloba tudo */}
+         <div className="justify-items-start" > {/* Div que engloba todos os elementos */}
+
+            <div className=" border-b border-black"> {/* Div do nome "Filtrar por" */}
                 Filtrar por
             </div>
            
             <div className="">  {/* Div da categoria "Marka" */}
                 Marka
                 <div className="flex"> 
-                    <input type="checkbox" id="adiddas" name="adiddas" className="accent-[#C92071]"/>
+                    <input type="checkbox" id="adiddas" name="adiddas" className="accent-[#C92071] "/>
                     <label for="adiddas"> Adiddas</label>
                 </div>
                 <div className="flex"> 
@@ -77,6 +79,7 @@ function ProductCheckBox(){
                     <label for="usado">Usado</label>
                 </div>
             </div>
+          </div>
         </div>
         </>
     )
