@@ -14,6 +14,7 @@ export default function Section(props) {
                         <a className="w-auto flex mr-5" href={props.link.href}>{props.link.text}<img className="ml-2.5" src="src/assets/images/arrow.svg"/></a>
                     )}
                 </div>
+                
                 {props.children}
             </div>
 
