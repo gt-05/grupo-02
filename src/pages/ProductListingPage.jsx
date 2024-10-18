@@ -4,23 +4,24 @@ import Section from "../components/section.jsx";
 
 import Layout from "../components/Layout.jsx";
 
+import ProductCheckBox from "../components/ProductCheckBox.jsx";
+
 export default function ProductListingPage() {
     return (
-        <Layout className="flex flex-col min-h-screen">
+      <>
+      
+        <Layout className="flex  min-h-screen">
         
           
-      <Section
-      title="Produtos em Alta"
-      titleAlign="left"
-      link={
-        {
-          "text": "ver todos",
-          "href": "https://redirect.link"
-        }
-      }>
+      <Section>
+        <div className="flex pt-6">
+
+      <ProductCheckBox className=""/>
       <ProductListing />
+        </div>
       </Section>
       
     </Layout>
+        </>
     )
 }
