@@ -1,7 +1,7 @@
-// src/components/BuyBox.jsx
 import React from 'react';
 import PropTypes from 'prop-types';
-import starIcon from "../assets/icons/star-icon.svg"; // Adjust path as necessary
+import starIcon from "../assets/icons/star-icon.svg";
+import ProductOptions from "./ProductOptions";
 
 const BuyBox = ({
   name,
@@ -11,17 +11,20 @@ const BuyBox = ({
   price,
   priceDiscount,
   description,
-  children,
-  productOptions,
 }) => {
+  const handlePurchase = () => {
+    alert(`Comprando ${name}`);
+    // Adicione lógica adicional aqui, se necessário
+  };
+
   return (
-    <div className="p-4 border border-light-gray-2 rounded-lg" role="region" aria-labelledby="buybox-header">
+    <div className="p-4 border border-light-gray-2 rounded-lg" role="region" aria-labelledby="buybox-header" aria-describedby="buybox-description">
       <h2 id="buybox-header" className="text-2xl text-dark-gray">{name}</h2>
-      <p className="text-sm text-dark-gray-3">{reference}</p>
+      <p id="buybox-description" className="text-sm text-dark-gray-3">{reference}</p>
       
       <div className="flex items-center my-2">
         <span className="flex items-center bg-warning text-white text-sm px-2 py-1 rounded-md">
-          {Array.from({ length: stars }, (_, i) => (
+          {Array.from({ length: Math.round(stars) }, (_, i) => (
             <img key={i} src={starIcon} alt="Star" className="ml-1 w-3" />
           ))}
         </span>
@@ -42,14 +45,12 @@ const BuyBox = ({
       <p className="text-sm text-dark-gray-2">{description}</p>
 
       <div className="my-4">
-        {productOptions}
+        <ProductOptions sizes={['39', '40', '41', '42', '43']} colors={['#FF5733', '#33FF57', '#3357FF', '#F3FF33', '#FF33A1']} shape="square" />
       </div>
 
-      <div>{children}</div>
-
       <button 
-        className="mt-4 bg-warning text-white text-base px-4 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-warning" 
-        onClick={() => alert(`Purchasing ${name}`)} // Example action
+        className="mt-4 bg-orange-500 text-white font-bold text-base px-4 py-2 rounded-md border border-dark-gray focus:outline-none focus:ring-2 focus:ring-orange-300" 
+        onClick={handlePurchase}
         aria-label={`Comprar ${name}`}
       >
         Comprar
@@ -66,13 +67,10 @@ BuyBox.propTypes = {
   price: PropTypes.string.isRequired,
   priceDiscount: PropTypes.string,
   description: PropTypes.string.isRequired,
-  children: PropTypes.node,
-  productOptions: PropTypes.node, // Expecting productOptions to be a node
 };
 
 BuyBox.defaultProps = {
   priceDiscount: null,
-  productOptions: null,
 };
 
 export default BuyBox;
