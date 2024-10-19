@@ -33,19 +33,18 @@ export default function ProductViewPage() {
                     </BuyBox>
                 </div>
             </div>
-            <div className="mt-2"> {/* Aumentando o espaçamento entre a galeria e a seção */}
-               <Section
-                    title="Produt os em Alta"
-                    titleAlign="left mt-24"
-                    link={{
-                        text: "ver todos",
-                        href: "https://redirect.link"
-                    }}
-                >
-                    <div className="mt-6"> {/* Aumentando o espaçamento dos textos */}
-                        <ProductListing />
-                    </div>
-                </Section>
+            <div className="mt-36"> {/* Aumentando o espaçamento entre a galeria e a seção */}
+            <Section
+      title="Produtos em Alta"
+      titleAlign="left "
+      link={
+        {
+          "text": "ver todos",
+          "href": "https://redirect.link"
+        }
+      }>
+      <ProductListing />
+      </Section>
             </div>
         </Layout>
     );
