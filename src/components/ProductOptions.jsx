@@ -1,64 +1,75 @@
-// src/components/ProductOptions.jsx
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
-const ProductOptions = ({ options, radius, shape, type }) => {
-  const [selectedOption, setSelectedOption] = useState(null);
+const ProductOptions = ({ sizes = [], colors = [], radius = '0', shape }) => {
+  const [selectedSize, setSelectedSize] = useState(null);
+  const [selectedColor, setSelectedColor] = useState(null);
 
-  const handleOptionClick = (option) => {
-    setSelectedOption(option);
+  const handleSizeClick = (size) => {
+    setSelectedSize(size);
+  };
+
+  const handleColorClick = (color) => {
+    setSelectedColor(color);
   };
 
   return (
-    <div className="flex gap-2">
-      {options.map((option, index) => {
-        const isOptionSelected = selectedOption === option;
-
-        const baseClasses = `flex justify-center items-center cursor-pointer transition duration-200 ${
-          isOptionSelected ? 'border-primary border-2' : 'border-light-gray-2 border'
-        }`;
-
-        if (shape === 'square') {
+    <div className="flex flex-col">
+      <div className="flex gap-2 mb-2">
+        {sizes.map((size, index) => {
+          const isSelected = selectedSize === size;
+          const baseClasses = `flex justify-center items-center cursor-pointer transition duration-200 ${
+            isSelected ? 'bg-[#C92071] border-primary border-2' : 'border-light-gray-2 border'
+          }`;
+          
           return (
             <div
               key={index}
-              onClick={() => handleOptionClick(option)}
-              className={`${baseClasses} h-11 px-3 rounded-${radius} text-2xl ${
-                type === 'color' ? '' : 'text-dark-gray-2'
-              } ${type === 'color' ? `bg-[${option}]` : ''}`}
+              className={`${baseClasses} ${shape === 'square' ? `h-11 w-11 rounded-${radius}` : 'w-8 h-8 rounded-full'}`}
+              role="button"
+              tabIndex={0}
+              onClick={() => handleSizeClick(size)}
+              onKeyPress={(e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                  handleSizeClick(size);
+                }
+              }}
+              aria-selected={isSelected}
             >
-              {type === 'text' ? option : null}
+              {size}
             </div>
           );
-        }
-
-        if (shape === 'circle') {
-          return (
-            <div
-              key={index}
-              onClick={() => handleOptionClick(option)}
-              className={`${baseClasses} w-8 h-8 rounded-full ${
-                type === 'color' ? `bg-[${option}]` : ''
-              }`}
-            />
-          );
-        }
-
-        return null;
-      })}
+        })}
+      </div>
+      <div className="flex gap-2">
+        {colors.map((color, index) => (
+          <div
+            key={index}
+            className={`w-8 h-8 rounded-full cursor-pointer border-2 transition duration-200 ${
+              selectedColor === color ? 'border-primary' : 'border-light-gray-2'
+            }`}
+            style={{ backgroundColor: color }}
+            onClick={() => handleColorClick(color)}
+            onKeyPress={(e) => {
+              if (e.key === 'Enter' || e.key === ' ') {
+                handleColorClick(color);
+              }
+            }}
+            role="button"
+            tabIndex={0}
+            aria-selected={selectedColor === color}
+          />
+        ))}
+      </div>
     </div>
   );
 };
 
 ProductOptions.propTypes = {
-  options: PropTypes.arrayOf(PropTypes.string).isRequired,
+  sizes: PropTypes.arrayOf(PropTypes.string).isRequired,
+  colors: PropTypes.arrayOf(PropTypes.string).isRequired,
   radius: PropTypes.string,
   shape: PropTypes.oneOf(['square', 'circle']).isRequired,
-  type: PropTypes.oneOf(['text', 'color']).isRequired,
-};
-
-ProductOptions.defaultProps = {
-  radius: '0',
 };
 
 export default ProductOptions;
