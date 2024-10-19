@@ -13,10 +13,12 @@ export default function ProductViewPage() {
 
     return (
         <Layout className="flex flex-col min-h-screen">   
-            <MenuNavegacao/>     
-            <div className="flex">
-                <Gallery2 className="flex-grow" />
-                <div className="ml-4">
+            <MenuNavegacao />     
+            <div className="flex mb-6"> {/* Aumentando a margem inferior para evitar sobreposição */}
+                <div className="flex-grow">
+                    <Gallery2 className="h-96 overflow-hidden" /> {/* Defina uma altura fixa */}
+                </div>
+                <div className="ml-4 w-1/3"> {/* Ajuste a largura aqui */}
                     <BuyBox
                         name="Tênis Nike Revolution 6 Next Nature Masculino"
                         reference="REF:38416711"
@@ -27,20 +29,26 @@ export default function ProductViewPage() {
                         description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco."
                     >
                         <ProductOptions sizes={sizes} colors={colors} shape="square" />
-                        <p>COMPRAR</p>
+                        <button className="mt-2 bg-primary text-white py-2 px-4 rounded">COMPRAR</button>
                     </BuyBox>
                 </div>
             </div>
-            <Section
-                title="Produtos em Alta"
-                titleAlign="left"
-                link={{
-                    text: "ver todos",
-                    href: "https://redirect.link"
-                }}
-            >
-                <ProductListing />
-            </Section>
+            <div className="mt-2"> {/* Aumentando o espaçamento entre a galeria e a seção */}
+                <Section
+                    title="Produtos em Alta"
+                    titleAlign="left mt-20"
+                    link={{
+                        text: "ver todos",
+                        href: "https://redirect.link"
+                    }}
+                >
+                    <div className="mt-6"> {/* Aumentando o espaçamento dos textos */}
+                        <ProductListing />
+                    </div>
+                </Section>
+            </div>
         </Layout>
     );
 }
+
+

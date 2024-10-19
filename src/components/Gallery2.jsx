@@ -42,7 +42,7 @@ export default function Gallery() {
             key={index}
             src={img.src}
             alt={img.alt}
-            className="w-20 h-20 object-cover cursor-pointer"
+            className="w-20 h-20 object-cover cursor-pointer mx-2" // Espaçamento adicionado aqui
             onClick={() => handleThumbnailClick(index)}
         />
     ));
@@ -72,3 +72,4 @@ export default function Gallery() {
         </div>
     );
 }
+

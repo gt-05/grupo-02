@@ -1,78 +1,34 @@
-import React, { useState } from 'react';
-import PropTypes from 'prop-types';
+import Logo from "./Logo"
+import shoppingIcon from "/src/assets/images/shopping-cart.svg"
 
-const ProductOptions = ({ sizes = [], colors = [], radius = '0', shape }) => {
-  const [selectedSize, setSelectedSize] = useState(null);
-  const [selectedColor, setSelectedColor] = useState(null);
-
-  const handleSizeClick = (size) => {
-    setSelectedSize(size);
-  };
-
-  const handleColorClick = (color) => {
-    setSelectedColor(color);
-  };
-
-  return (
-    <div className="flex flex-col">
-      {/* Seção de tamanhos */}
-      <div className="flex gap-2 mb-2">
-        {sizes.map((size, index) => {
-          const isSelected = selectedSize === size;
-          const baseClasses = `flex justify-center items-center cursor-pointer transition duration-200 ${
-            isSelected ? 'bg-[#C92071] border-2 border-primary' : 'border border-light-gray-2'
-          }`;
-          
-          return (
-            <div
-              key={index}
-              className={`${baseClasses} ${shape === 'square' ? `h-11 w-11 rounded-${radius}` : 'w-8 h-8 rounded-full'}`}
-              role="button"
-              tabIndex={0}
-              onClick={() => handleSizeClick(size)}
-              onKeyPress={(e) => {
-                if (e.key === 'Enter' || e.key === ' ') {
-                  handleSizeClick(size);
-                }
-              }}
-              aria-selected={isSelected}
-            >
-              {size}
+function Header (){
+    return (
+        <> 
+    <div className="w-full h-48 bg-white ">
+        <div className="px-20 py-10">
+            <div className="flex space-x-6 ">
+                <Logo/>
+                <input type="text" placeholder="Pesquisar produto..." className="bg-[#F5F5F5] rounded-md p-2 w-5/12" />
+                <div className="flex items-center pl-6 ">
+                <a href="#" className="underline ">Cadastre-se</a>
+                </div>
+                <button className="w-28 h-10 text-[#F5F5F5] bg-[#C92071] rounded-md" >Entrar</button>
+                <div className="pl-10">
+                <img src= {shoppingIcon} alt="Icone de carrinho de compras" />  
+                </div>
             </div>
-          );
-        })}
-      </div>
-
-      {/* Seção de cores */}
-      <div className="flex gap-2">
-        {colors.map((color, index) => (
-          <div
-            key={index}
-            className={`w-8 h-8 rounded-full cursor-pointer border-2 transition duration-200 ${
-              selectedColor === color ? 'border-[#C92071]' : 'border-light-gray-2'
-            }`}
-            style={{ backgroundColor: color }}
-            onClick={() => handleColorClick(color)}
-            onKeyPress={(e) => {
-              if (e.key === 'Enter' || e.key === ' ') {
-                handleColorClick(color);
-              }
-            }}
-            role="button"
-            tabIndex={0}
-            aria-selected={selectedColor === color}
-          />
-        ))}
-      </div>
+        <   div className="pl-2 pt-14">
+                <nav className=" flex space-x-6">
+                    <a className="text-normal hover:font-bold hover:underline hover:text-[#C92071]" href="/">Home</a>
+                    <a className="text-normal hover:font-bold hover:underline hover:text-[#C92071]" href="/products">Produtos</a>
+                    <a className="text-normal hover:font-bold hover:underline hover:text-[#C92071]" href="/productsView">Categorias</a>
+                    <a className="text-normal hover:font-bold hover:underline hover:text-[#C92071]" href="#">Meus Pedidos</a>
+                </nav>
+            </div>
+        </div>
     </div>
-  );
-};
+        </>
+    )
+}
 
-ProductOptions.propTypes = {
-  sizes: PropTypes.arrayOf(PropTypes.string).isRequired,
-  colors: PropTypes.arrayOf(PropTypes.string).isRequired,
-  radius: PropTypes.string,
-  shape: PropTypes.oneOf(['square', 'circle']).isRequired,
-};
-
-export default ProductOptions;
+export default Header;
