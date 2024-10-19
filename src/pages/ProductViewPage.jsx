@@ -34,9 +34,9 @@ export default function ProductViewPage() {
                 </div>
             </div>
             <div className="mt-2"> {/* Aumentando o espaçamento entre a galeria e a seção */}
-                <Section
-                    title="Produtos em Alta"
-                    titleAlign="left mt-20"
+               <Section
+                    title="Produt os em Alta"
+                    titleAlign="left mt-24"
                     link={{
                         text: "ver todos",
                         href: "https://redirect.link"

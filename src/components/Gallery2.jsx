@@ -42,7 +42,7 @@ export default function Gallery() {
             key={index}
             src={img.src}
             alt={img.alt}
-            className="w-20 h-20 object-cover cursor-pointer mx-2" // Espaçamento adicionado aqui
+            className="w-20 h-20 object-cover cursor-pointer mx-2" 
             onClick={() => handleThumbnailClick(index)}
         />
     ));
@@ -66,10 +66,9 @@ export default function Gallery() {
                     <img src="/src/assets/icons/next.svg" alt="Next" />
                 </span>
             </div>
-            <div className="thumbnails flex justify-center mt-4">
+            <div className="thumbnails flex justify-center mt-4" style={{ position: 'relative', zIndex: 10 }}>
                 {thumbnailImgs}
             </div>
         </div>
     );
 }
-
