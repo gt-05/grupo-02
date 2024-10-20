@@ -2,7 +2,7 @@ import Gallery from "../components/Gallery.jsx";
 import Layout from "../components/Layout.jsx";
 import Laye from "../components/Laye.jsx";
 import ProductListing from "../components/ProductListing.jsx";
-import Section from "../components/section.jsx";
+import Section from "../components/Section.jsx";
 import Colecao from "../components/ColecaoDestaque.jsx";
 import CardMine from "../components/Colecao.jsx"
 

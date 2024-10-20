@@ -1,6 +1,6 @@
 import ProductListing from "../components/ProductListing.jsx"
 
-import Section from "../components/section.jsx";
+import Section from "../components/Section.jsx";
 
 import Layout from "../components/Layout.jsx";
 
