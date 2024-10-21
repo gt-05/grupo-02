@@ -2,7 +2,7 @@ import React from 'react';
 import ProductListing from "../components/ProductListing.jsx";
 import Gallery2 from "../components/Gallery2.jsx";
 import MenuNavegacao from "../components/MenuNavegacao.jsx";
-import Section from "../components/Section.jsx";
+import Section from "../components/section.jsx";
 import Layout from "../components/Layout.jsx";
 import BuyBox from "../components/BuyBox.jsx";
 import ProductOptions from "../components/ProductOptions.jsx";
