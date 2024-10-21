@@ -1,5 +1,6 @@
 import Logo from "./Logo"
 import shoppingIcon from "/src/assets/images/shopping-cart.svg"
+import { NavLink } from "react-router-dom";
 
 function Header (){
     return (
@@ -17,12 +18,17 @@ function Header (){
                 <img src= {shoppingIcon} alt="Icone de carrinho de compras" />  
                 </div>
             </div>
-        <   div className="pl-2 pt-14">
+
+            <div className="pt-14">
                 <nav className=" flex space-x-6">
-                    <a className="text-normal hover:font-bold hover:underline hover:text-[#C92071]" href="/">Home</a>
-                    <a className="text-normal hover:font-bold hover:underline hover:text-[#C92071]" href="/products">Produtos</a>
-                    <a className="text-normal hover:font-bold hover:underline hover:text-[#C92071]" href="/productsView">Categorias</a>
-                    <a className="text-normal hover:font-bold hover:underline hover:text-[#C92071]" href="#">Meus Pedidos</a>
+                <NavLink to="/" className={({isActive}) => isActive 
+                ? "font-bold underline text-[#C92071]" : "text-normal hover:font-bold hover:underline hover:text-[#C92071]" }> Home </NavLink>
+                <NavLink to="/products" className={({isActive}) => isActive 
+                ? "font-bold underline text-[#C92071]" : "text-normal hover:font-bold hover:underline hover:text-[#C92071]" }> Produtos </NavLink>
+                <NavLink to="/productsView" className={({isActive}) => isActive 
+                ? "font-bold underline text-[#C92071]" : "text-normal hover:font-bold hover:underline hover:text-[#C92071]" }> Categorias </NavLink>
+                <NavLink to="/" className={({isActive}) => isActive 
+                ? "font-bold underline text-[#C92071]" : "text-normal hover:font-bold hover:underline hover:text-[#C92071]" }> Pedidos </NavLink>
                 </nav>
             </div>
         </div>

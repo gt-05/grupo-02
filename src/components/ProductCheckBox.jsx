@@ -1,8 +1,10 @@
 function ProductCheckBox(){
     return (
         <>
-        <div className=" border-4 w-[308px] h-full "> {/* Div Principal engloba tudo */}
-            <form action="" className="p-7 ">
+       
+
+        <div className="bg-white ml-[80px] mt-[30px] w-[308px] h-full px-[30px] pt-[30px] rounded"> {/* Div Principal engloba tudo */}
+            <form action="" className="">
 
             <div className="pb-[20px] border-b-[1px] border-[#CCCCCC] font-bold text-[#474747] text-[16px]"> {/* Div do nome "Filtrar por" */}
                 Filtrar por
@@ -88,6 +90,7 @@ function ProductCheckBox(){
             </div>
             </form>
         </div>
+        
         </>
     )
 }
