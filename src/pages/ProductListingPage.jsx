@@ -11,15 +11,15 @@ export default function ProductListingPage() {
       <>
       
         <Layout className="flex  min-h-screen">
-        
-          
+
+            <div className="flex place-content-around"> {/* Div de formatação pra ajustar "ProductcheckBox ao lado da section"*/}
+      <ProductCheckBox className=""/>
       <Section>
         <div className="flex pt-6">
-
-      <ProductCheckBox className=""/>
       <ProductListing />
         </div>
       </Section>
+            </div> 
       
     </Layout>
         </>
