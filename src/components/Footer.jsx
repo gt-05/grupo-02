@@ -1,12 +1,12 @@
 import React from 'react';
-import logo from '../assets/images/logo.footer.svg';
 import midias from '../assets/images/midias.svg';
+import Logo from './Logo';
 const Footer = () => {
   return (
     <footer className="bg-gray-900 text-white p-8 flex flex-wrap justify-around w-ful text-center text-white bg-black p-5 mt-24">
       {/* Logo e descrição */}
       <div className="mb-8 md:mb-0 w-80">
-        <img src={logo} alt="Drip Store Logo" className="w-24 mb-4 w-64" />
+        <Logo color="white"/>
         <p className="text-gray-400 mb-4 mt-4">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolor.
         </p>

@@ -19,7 +19,7 @@ export default function CardMine() {
             
             <div className="  w-screen justify-between mx-32">
                 <h2 className="text-2xl font-bold ">Coleções em destaque</h2>
-                <div className="flex  justify-center gap-3" style={css}>
+                <div className="flex justify-center gap-3" style={css}>
                     {imgs.map((img, index) => {
                        return <img key={index} src={img.src} alt={`Coleção ${index + 1}`} className="w-full max-w-sm" />
                     })}

@@ -8,7 +8,7 @@ function Header (){
     <div className="w-full h-48 bg-white ">
         <div className="px-20 py-10">
             <div className="flex space-x-6 ">
-                <Logo/>
+                <Logo color="#C92071"/>
                 <input type="text" placeholder="Pesquisar produto..." className="bg-[#F5F5F5] rounded-md p-2 w-5/12" />
                 <div className="flex items-center pl-6 ">
                 <a href="#" className="underline ">Cadastre-se</a>

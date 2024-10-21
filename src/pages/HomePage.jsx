@@ -17,7 +17,8 @@ export default function Home() {
                 titleAlign="left"
                 link={{
                     text: "ver todos",
-                    href: "https://redirect.link"
+                    href: "https://redirect.link",
+                    color: "#C92071"
                 }}
             >
                 <ProductListing />
