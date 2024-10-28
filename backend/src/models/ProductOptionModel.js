@@ -12,15 +12,15 @@ const ProductOptionModel = connection.define("ProductOptionModel", {
             key: 'id'
         }
     },
-    title: STRING(20),
-    shape: ENUM,
+    title: DataTypes.STRING(20),
+    shape: DataTypes.ENUM("square", "circle"),
     radius:  {
         type: DataTypes.INTEGER.UNSIGNED,
         defaultValue: 0,
         allowNull: false
     },
-    type: ENUM,
-    values: STRING(255)
+    type: DataTypes.ENUM("text", "color"),
+    values: DataTypes.STRING(255)
 }, {
     tableName: 'product_option'
 });
