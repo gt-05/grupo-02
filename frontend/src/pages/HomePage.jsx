@@ -12,15 +12,14 @@ export default function Home() {
             <Gallery />
             <CardMine/>
             <Colecao />
-            <Section 
+            <Section
                 title="Produtos em Alta"
                 titleAlign="left"
                 link={{
                     text: "ver todos",
                     href: "https://redirect.link",
                     color: "#C92071"
-                }}
-            >
+                }}>
                 <ProductListing />
             </Section>
             <Laye />

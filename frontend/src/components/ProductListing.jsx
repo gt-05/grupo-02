@@ -13,7 +13,7 @@ function ProductListing(){
 
     return(
     <>
-        <div className="flex flex-wrap m-auto max-w-[1200px] gap-2.5">
+        <div className="flex flex-wrap m-auto gap-2.5 justify-center">
             {products.map((product, index) =>
                 <ProductCard key={index} image={product.images[0]} name={product.name} price={product.price} priceDiscount={product.price_with_discount}/>
             )}
