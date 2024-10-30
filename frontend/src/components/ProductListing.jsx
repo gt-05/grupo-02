@@ -1,40 +1,24 @@
-import {useEffect, useState} from "react";
-import ProductCard from "./ProductCard.jsx";
+import { useEffect, useState } from "react";
+import ProductCard from "./ProductCard.jsx"
 
-function ProductListing() {
+function ProductListing(){
+    const url = 'https://raw.githubusercontent.com/gt-05/.github/refs/heads/main/db.json'
+    let [products, setProducts] = useState([]);
 
-    let [productsList, setProducts] = useState([])
-
-    useEffect(function(){
-        fetch('https://raw.githubusercontent.com/gt-05/.github/refs/heads/main/db.json').then(function(response){
-            return response.json()
-        }).then(function(body){
-            return setProducts(body.products);
-            
+    useEffect(function (){
+        fetch(url).then(function(response) {return response.json()}).then(function(body) {
+            setProducts(body.products)
         })
-    })
-    
-    return (
-        
-        <div className="max-w-[1228px] flex justify-center items-center">
-            <div className="flex flex-wrap justify-center">
-                <div className="flex flex-wrap justify-center gap-5">
-                    {productsList.map(product => {
-                        return <ProductCard
-                        discountTag='30%'
-                        image={product.images[0]}
-                        name={product.name}
-                        price={product.price} 
-                        priceDiscount={product.price_with_discount}/>
-                    })
+    },[])
 
-                    }
-                    
-
-                </div>
-            </div>
+    return(
+    <>
+        <div className="flex flex-wrap m-auto max-w-[1200px] gap-2.5">
+            {products.map((product, index) =>
+                <ProductCard key={index} image={product.images[0]} name={product.name} price={product.price} priceDiscount={product.price_with_discount}/>
+            )}
         </div>
-    );
+    </> 
+    )
 }
-
-export default ProductListing;
+export default ProductListing

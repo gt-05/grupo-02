@@ -5,11 +5,11 @@ import Header from './Header'; // Ajuste o caminho conforme necessário
 const Layout = ({ children, className }) => {
     return (
         <div className={`flex flex-col min-h-screen ${className}`}>
-            <Header />
+            <Header color="#C92071"/>
             <main className="flex-grow">
                 {children}
             </main>
-            <Footer />
+            <Footer color="white"/>
         </div>
     );
 };
