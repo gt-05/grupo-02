@@ -7,21 +7,22 @@ import Layout from "../components/Layout.jsx";
 import ProductCheckBox from "../components/ProductCheckBox.jsx";
 
 export default function ProductListingPage() {
-    return (
-      <>
-      
-        <Layout className="flex  min-h-screen">
+  return (
+    <>
 
-            <div className="flex place-content-around"> {/* Div de formatação pra ajustar "ProductcheckBox ao lado da section"*/}
-      <ProductCheckBox className=""/>
-      <Section>
-        <div className="flex pt-6">
-      <ProductListing />
+      <Layout className="flex  min-h-screen">
+
+        <div className="flex place-content-around"> {/* Div de formatação pra ajustar "ProductcheckBox ao lado da section"*/}
+
+          <Section>
+            <div className="flex">
+            <ProductCheckBox />
+            <ProductListing />
+            </div>
+          </Section>
         </div>
-      </Section>
-            </div> 
-      
-    </Layout>
-        </>
-    )
+
+      </Layout>
+    </>
+  )
 }
