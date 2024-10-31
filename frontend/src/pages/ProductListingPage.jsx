@@ -17,7 +17,7 @@ export default function ProductListingPage() {
           <Section>
             <div className="flex">
             <ProductCheckBox />
-            <ProductListing />
+            <ProductListing/>
             </div>
           </Section>
         </div>

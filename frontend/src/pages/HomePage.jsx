@@ -27,7 +27,8 @@ export default function Home() {
                     href: "https://redirect.link",
                     color: "#C92071"
                 }}>
-                <ProductListing />
+                <ProductListing
+                maxNumber='8' />
             </Section>
             <Laye />
         </Layout>
