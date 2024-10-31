@@ -10,10 +10,17 @@ export default function Home() {
     return (
         <Layout >
             <Gallery />
-            <CardMine/>
-            <Colecao />
             <Section
-                title="Produtos em Alta"
+            title="Coleções em destaque">
+                <CardMine/>
+            </Section>
+            <Section
+            title="Coleções em destaque"
+            titleAlign="center">
+                <Colecao />
+            </Section>
+            <Section
+                title="Produtos em alta"
                 titleAlign="left"
                 link={{
                     text: "ver todos",

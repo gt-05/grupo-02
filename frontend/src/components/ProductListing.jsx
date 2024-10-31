@@ -13,9 +13,15 @@ function ProductListing(){
 
     return(
     <>
-        <div className="flex flex-wrap m-auto gap-2.5 justify-center">
+        <div className="flex flex-wrap m-auto gap-[22px] justify-center">
             {products.map((product, index) =>
-                <ProductCard key={index} image={product.images[0]} name={product.name} price={product.price} priceDiscount={product.price_with_discount}/>
+                <ProductCard
+                key={index}
+                image={product.images[0]}
+                name={product.name}
+                price={product.price}
+                priceDiscount={product.price_with_discount}
+                />
             )}
         </div>
     </> 

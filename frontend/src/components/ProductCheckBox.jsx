@@ -3,7 +3,7 @@ function ProductCheckBox(){
         <>
        
 
-        <div className="bg-[green] w-[608px] h-full px-[30px] py-[30px] rounded"> {/* Div Principal engloba tudo */}
+        <div className="bg-[white] w-[608px] h-full px-[30px] py-[30px] rounded"> {/* Div Principal engloba tudo */}
             <form action="" className="">
 
             <div className="pb-[20px] border-b-[1px] border-[#CCCCCC] font-bold text-[#474747] text-[16px]"> {/* Div do nome "Filtrar por" */}
