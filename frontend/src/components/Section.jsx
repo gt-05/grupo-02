@@ -4,7 +4,7 @@ export default function Section(props) {
     let position = `text-${align}`;
     return (
         <>
-            <div className="flex flex-col m-auto max-w-[1235px] mb-[70px]">
+            <div className="flex flex-col m-auto max-w-[1260px] mb-[70px]">
                 <div className="flex my-[20px]">
                     <div className={position + ' grow'}>
                         <h2 className="text-[24px] font-extrabold">{props.title}</h2>

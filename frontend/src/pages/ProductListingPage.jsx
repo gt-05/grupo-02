@@ -15,7 +15,7 @@ export default function ProductListingPage() {
         <div className="flex place-content-around"> {/* Div de formatação pra ajustar "ProductcheckBox ao lado da section"*/}
 
           <Section>
-            <div className="flex">
+            <div className="flex gap-[25px]">
             <ProductCheckBox />
             <ProductListing/>
             </div>
