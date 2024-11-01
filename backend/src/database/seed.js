@@ -105,10 +105,12 @@ const ProductCategoryModel = require('../models/ProductCategoryModel');
 const ProductImageModel = require("../models/ProductImageModel");
 
 async function execute() {
-     await ProductModel.bulkCreate(products);
+    await ProductModel.bulkCreate(products);
     await ProductImageModel.bulkCreate(productImages);
     await CategoryModel.bulkCreate(categories);
-     await ProductCategoryModel.bulkCreate(productCategories);
+    await ProductCategoryModel.bulkCreate(productCategories);
 }
 
 execute();
+
+    
