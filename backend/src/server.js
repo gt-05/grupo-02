@@ -10,7 +10,7 @@ app.use(cors());
 app.use('/public', imagePlaceHolder, express.static('public'));
 app.use(express.json());
 
-const userRoutes = require('./router/user-routes');
+const userRoutes = require('./routes/user-routes');
 
 const propsRoutes = require('./router/product-routes');
 
