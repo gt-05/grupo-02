@@ -13,7 +13,7 @@ const ProductCategoryModel = connection.define('ProductCategoryModel', {
             }
         }
     },
-    category_id: {
+    category_id:{
         type: DataTypes.INTEGER,
         allowNull: false,
         onDelete: "CASCADE",
@@ -23,12 +23,13 @@ const ProductCategoryModel = connection.define('ProductCategoryModel', {
                 tableName: 'category'
             }
         }
+    }, 
+    }, {
+        tableName: "product_category",
+        timestamps: false
     }
-}, {
-    tableName: "product_category",
-    timestamps: false
-});
+);
 
-ProductCategoryModel.removeAttribute('id');
+    ProductCategoryModel.removeAttribute('id');
 
-module.exports = ProductCategoryModel;
+    module.exports = ProductCategoryModel;

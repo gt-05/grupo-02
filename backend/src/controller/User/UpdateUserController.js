@@ -1,10 +1,11 @@
 
-const ProductModel = require('../../models/ProductModel');
+const UserModel = require('../../models/UserModel');
+const UsertModel = require('../../models/UserModel');
 
 module.exports = async (request, response) => {
     let {body} = request;
 
-    await ProductModel.update(body, {
+    await UserModel.update(body, {
         where: {
             id: request.params.id
         }

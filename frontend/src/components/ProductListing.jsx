@@ -14,15 +14,17 @@ function ProductListing(props){
     return(
     <>
         <div className="flex flex-wrap m-auto gap-[22px] justify-center">
-            {products.slice(0, props.maxNumber).map((product, index) =>
-                <ProductCard
+            {products.slice(0, props.maxNumber).map((product, index) => {
+                let image = product.image[0]?.url ?? product.placeHolder_image
+                return <ProductCard
                 key={index}
                 image={product.images[0]}
                 name={product.name}
                 price={product.price}
                 priceDiscount={product.price_with_discount}
                 />
-            )}
+})
+}
         </div>
     </> 
     )
