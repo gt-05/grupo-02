@@ -1,17 +1,18 @@
-const express = require('express');
 
-let router = express.Router();
+const privateRoutes = require('./private-routes');
+const publicRoutes = require('./public-routes');
 
-const AllProductControler = require('../controller/Products/AllProductControler');
-const CreateProductControler = require('../controller/Products/CreateControler');
-const UpdateController = require('../controller/Products/UpdateController');
-const DeleteController = require('../controller/Products/DeleteController');
-const GetBySlug = require("../controller/Products/GetBySlug");
+const AllProductsController = require('../controllers/Products/AllProductsController');
+const CreateController = require('../controllers/Products/CreateController');
+const UpdateController = require("../controllers/Products/UpdateController");
+const DeleteController = require("../controllers/Products/DeleteController");
+const GetBySlug = require("../controllers/Products/GetBySlug");
 
-router.get('/products', AllProductControler);
-router.get('/product/:slug', GetBySlug);
-router.post('/products', CreateProductControler);
-router.put('/products/:id', UpdateController);
-router.delete('/products/:id', DeleteController);
 
-module.exports = router;
+privateRoutes.get('/products', AllProductsController);
+publicRoutes.get('/products/:slug', GetBySlug);
+privateRoutes.post('/products', CreateController);
+privateRoutes.put('/products/:id', UpdateController);
+privateRoutes.delete('/products/:id', DeleteController);
+
+module.exports = [publicRoutes, privateRoutes];

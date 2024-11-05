@@ -1,4 +1,3 @@
-
 const ProductModel = require('../../models/ProductModel');
 
 module.exports = async (request, response) => {
@@ -9,5 +8,6 @@ module.exports = async (request, response) => {
             id: request.params.id
         }
     });
+
     return response.status(204).end();
 }

@@ -1,4 +1,4 @@
-const connection = require("../database/connection");
+const connection = require('../database/connection');
 const {DataTypes} = require('sequelize');
 
 const UserModel = connection.define("UserModel", {
@@ -8,7 +8,7 @@ const UserModel = connection.define("UserModel", {
     },
     surname: {
         type: DataTypes.STRING(45),
-        allowNull: false
+        allowNull: null
     },
     email: {
         type: DataTypes.STRING(255),

@@ -98,46 +98,18 @@ const productImages = [
     }
 ];
 
-const productOptions = [
-    {
-        product_id: 1,
-        title: 'Produto A',
-        options: {
-            color: ['red', 'blue', 'green'],
-            size: ['S', 'M', 'L']
-        }
-    },
-    {
-        product_id: 2,
-        title: 'Produto B',
-        options: {
-            color: ['black', 'white'],
-            size: ['M', 'L', 'XL']
-        }
-    },
-    {
-        product_id: 3,
-        title: 'Produto C',
-        options: {
-            color: ['yellow', 'purple'],
-            size: ['S', 'M']
-        }
-    }
-];
-
 
 const ProductModel = require('../models/ProductModel');
 const CategoryModel = require('../models/CategoryModel');
-const ProductCategoryModel = require('../models/ProductCategoryModel'); 
-const ProductImageModel = require('../models/ProductImageModel');
-const ProductOptionModel = require('../models/ProductOptionModel');
+const ProductCategoryModel = require('../models/ProductCategoryModel');
+const ProductImageModel = require("../models/ProductImageModel");
 
 async function execute() {
-    await ProductModel.bulkCreate(products);
-    await CategoryModel.bulkCreate(categories);
-    await ProductCategoryModel.bulkCreate(productCategories);
+    // await ProductModel.bulkCreate(products);
     await ProductImageModel.bulkCreate(productImages);
-    await ProductOptionModel.bulkCreate(productOptions);
+    // await CategoryModel.bulkCreate(categories);
+    // await ProductCategoryModel.bulkCreate(productCategories);
 }
 
 execute();
+

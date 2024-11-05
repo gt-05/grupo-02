@@ -1,8 +1,8 @@
-const ProductModel = require('../../models/ProductModel');
+const ProductModel = require("../../models/ProductModel");
 const ProductImageModel = require("../../models/ProductImageModel");
-const { deleteMany } = require('../../servises/Product-images');
+const {deleteMany} = require('../../services/product-images');
 
-module.exports = async(request, response) => {
+module.exports = async (request, response) => {
     let images = await ProductImageModel.findAll({
         attributes: ['path'],
         where: {
@@ -17,9 +17,8 @@ module.exports = async(request, response) => {
     });
 
     if(count > 0) {
-        deleteMany(images.map(image => image.path));
-        }
-    
+        deleteMany(images.map(image => image.path))
+    }
 
     return response.status(204).end();
 }
