@@ -1,13 +1,14 @@
 const connection = require('../database/connection');
 const {DataTypes} = require('sequelize');
-const { getPublicUrl } = require('../ultils/url-builder');
+const { getPublicUrl } = require('../../src/ultius/url-bilder')
+
 
 const ProductImageModel = connection.define("ProductImageModel", {
     product_id: {
         type: DataTypes.INTEGER,
         allowNull: false,
         onDelete: "CASCADE",
-        references: { 
+        references: {
             model: {
                 tableName: "product"
             },
@@ -20,13 +21,13 @@ const ProductImageModel = connection.define("ProductImageModel", {
     },
     url: {
         type: DataTypes.VIRTUAL,
-        get(){
+        get() {
             return getPublicUrl(this.path);
         }
     }
 }, {
-    tableName: 'product_image',
-    timestamps: false
+    tableName: 'product_image'
 });
+
 
 module.exports = ProductImageModel;
