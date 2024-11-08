@@ -26,4 +26,3 @@ const ProductOptionModel = connection.define("ProductOptionModel", {
 });
 
 module.exports = ProductOptionModel;
-
