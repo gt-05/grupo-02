@@ -5,3 +5,5 @@ Productmodel.hasMany(ProductImageModel, {
     foreignKey: 'product_id',
     as: 'images'
 })
+
+
