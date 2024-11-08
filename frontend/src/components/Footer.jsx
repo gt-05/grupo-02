@@ -3,7 +3,7 @@ import midias from '../assets/images/midias.svg';
 
 const Footer = (props) => {
   return (
-    <footer className="bg-gray-900 text-white p-8 flex flex-wrap justify-around w-ful text-center text-white bg-black p-5">
+    <footer className="bg-gray-900 text-white px-[80px] py-[30px] pt-[50px] flex flex-wrap gap-x-[201px] w-ful text-white bg-black p-5">
       {/* Logo e descrição */}
       <div className="mb-8 md:mb-0 w-80">
 
@@ -47,14 +47,14 @@ const Footer = (props) => {
       </div>
 
       {/* Contato */}
-      <div className="mb-8 md:mb-0 w-64">
+      <div className="mb-8 md:mb-0 w-[210px]">
         <h4 className="text-xl font-semibold mb-2">Contato</h4>
         <p className="text-gray-400">Av. Santos Dumont, 1510 - 1 andar - Aldeota, Fortaleza - CE, 60150-161</p>
         <p className="text-gray-400">(85) 3051-3411</p>
       </div>
 
       {/* Rodapé com direitos autorais */}
-      <div className="w-full text-center mt-8 border-t border-gray-700 pt-4">
+      <div className="w-full text-center mt-8 border-t border-gray-700 pt-[30px]">
         <p className="text-gray-400">&copy; 2022 Digital College.</p>
       </div>
     </footer>
