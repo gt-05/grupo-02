@@ -1,6 +1,6 @@
 const connection = require('../database/connection');
 const {DataTypes} = require('sequelize');
-const {getPublicUrl} = require('../ultils/url-builder');
+const {getPublicUrl} = require('../ultius/url-bilder');
 
 const ProductModel = connection.define("ProductModel", {
     name: {
@@ -12,12 +12,12 @@ const ProductModel = connection.define("ProductModel", {
         allowNull: null
     },
     slug: {
-        type: DataTypes.STRING(255),
+        type:DataTypes.STRING(255),
         allowNull: false
     },
     description: DataTypes.TEXT,
     price_with_discount: DataTypes.DECIMAL(5, 2),
-    enabled: {
+    enabbled: {
         type: DataTypes.BOOLEAN,
         defaultValue: 0,
         allowNull: false
@@ -30,11 +30,13 @@ const ProductModel = connection.define("ProductModel", {
     placeholder_image: {
         type: DataTypes.VIRTUAL,
         get() {
-            return getPublicUrl(`${this.slug}/placeholder.jpeg`);
+            return getPublicUrl("placeholder/placeholder-01.jpeg")
         }
     }
+        
 }, {
-    tableName: "product"
+    tableName:"product"
 });
+
 
 module.exports = ProductModel;
