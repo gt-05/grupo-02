@@ -3,7 +3,7 @@ import midias from '../assets/images/midias.svg';
 
 const Footer = (props) => {
   return (
-    <footer className="bg-gray-900 text-white p-8 flex flex-wrap justify-around w-ful text-center text-white bg-black p-5">
+    <footer className="bg-gray-900 text-white p-8 flex flex-wrap justify-around w-ful text-left text-white bg-black p-5">
       {/* Logo e descrição */}
       <div className="mb-8 md:mb-0 w-80">
 
