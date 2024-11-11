@@ -18,7 +18,7 @@ module.exports = async(request, response) => {
         console.log(error.message);
         response.status(400);
         return response.json({
-            message: "Erro ao criar produto"
+            message: "Erro ao criar a categoria"
         })
     }
     

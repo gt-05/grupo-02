@@ -1,4 +1,3 @@
-const OptionModel =require ('../../models/ProductOptionModel');
 const ProductModel = require('../../models/ProductModel');
 const ProductOptionModel = require('../../models/ProductOptionModel');
 
@@ -10,7 +9,7 @@ module.exports = async(request, response) => {
         }
     });
 
-    let count = await OptionModel.destroy({
+    let count = await ProductModel.destroy({
         where: {
             id: request.params.id
         }

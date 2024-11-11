@@ -16,9 +16,9 @@ module.exports = async (request, response) => {
         where: {email}
     });
 
-    let isValisUser = bcrypt.compareSync(password.toString(), user.password);
+    let isValidUser = bcrypt.compareSync(password.toString(), user.password);
 
-    if(!isValisUser) {
+    if(!isValidUser) {
         response.status(401);
         return response.json({
             message: "Usuario não autorizado"

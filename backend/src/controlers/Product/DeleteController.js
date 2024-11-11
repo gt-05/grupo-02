@@ -1,6 +1,6 @@
 const ProductModel = require('../../models/ProductModel');
 const ProductImageModel = require("../../models/ProductImageModel");
-const { deleteMany } = require('../../servises/Product-images');
+const { deleteMany } = require('../../services/Product-images');
 
 module.exports = async(request, response) => {
     let images = await ProductImageModel.findAll({

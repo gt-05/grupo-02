@@ -1,6 +1,7 @@
 const ProductModel = require('../../models/ProductModel');
 const ProductImageModel = require('../../models/ProductImageModel');
-const {saveByUrl} = require('../../servises/Product-images');
+const ProductOptionModel = require('../../models/ProductOptionModel');
+const {saveByUrl} = require('../../services/Product-images');
 
 module.exports = async(request, response) => {
     let {
@@ -27,7 +28,7 @@ module.exports = async(request, response) => {
     let images = [];
 
     try{
-
+        console.log(request.body.images);
         for (let url of request.body.images) {
             let {relativePath} = await saveByUrl({url, slug});
             images.push({
@@ -38,7 +39,7 @@ module.exports = async(request, response) => {
 
      await ProductImageModel.bulkCreate(images);
     response.status(201);
-    return response.json(product);
+   ;
 
     } catch (error) {
         console.log(error.menssage);
@@ -48,4 +49,36 @@ module.exports = async(request, response) => {
         });
     }
 
+    let options = [];
+        try {
+        
+        for (let optionData of request.body.options) {
+           
+            options.push({
+                product_id: request.params.id,  
+                title: optionData.title,        
+                shape: optionData.shape,        
+                radius: optionData.radius,      
+                type: optionData.type,          
+                values: optionData.values.join()
+            });
+        }
+            
+        if (options.length > 0) {
+            console.log(options);
+            await ProductOptionModel.bulkCreate(options);
+            return response.status(201).json({
+                message: 'Opções criadas com sucesso'
+            });
+        } else {
+            return response.status(400).json({
+                message: "Nenhuma opção fornecida"
+            });
+        }
+    } catch (error) {
+        return response.status(500).json({
+            message: `Erro ao salvar opções: ${error.message}`
+        });
+        
+    }
 }
