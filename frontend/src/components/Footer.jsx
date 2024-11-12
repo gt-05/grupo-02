@@ -35,7 +35,7 @@ const Footer = () => {
       <div className="mb-8 md:mb-0">
         <h4 className="text-xl font-semibold mb-2">Categorias</h4>
         <ul className="space-y-2">
-          <li><a href="#" className="text-white hover:text-slate-300">Camisetas</a></li>
+          <li><a href="#" className="text-white hover:text-dark_gray_2">Camisetas</a></li>
           <li><a href="#" className="text-white hover:text-dark_gray_2">Calças</a></li>
           <li><a href="#" className="text-white hover:text-dark_gray_2">Bonés</a></li>
           <li><a href="#" className="text-white hover:text-dark_gray_2">Headphones</a></li>
