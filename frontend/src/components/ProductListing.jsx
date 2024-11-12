@@ -23,7 +23,7 @@ function ProductListing({ maxNumber }) {
     }, []);
 
     return (
-        <div className="flex flex-wrap m-auto gap-[22px] justify-center">
+        <div className="flex flex-wrap m-auto justify-between">
             {products.slice(0, maxNumber).map((product, index) => {
                 let image = product.images[0]?.url ?? product.placeHolder_image;
                 
