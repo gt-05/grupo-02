@@ -5,6 +5,7 @@ const ProductOptionModel = connection.define("ProductOptionModel", {
     product_id: {
         type: DataTypes.INTEGER,
         allowNull: false,
+        onDelete: "CASCADE",
         references: {
             model: {
                 tableName: "product"

@@ -8,6 +8,7 @@ const ListImageController = require('../controlers/Product/ListImageController')
 const GetBySlug = require("../controlers/Product/GetBySlug");
 const CreateImageController = require('../controlers/Product/CreateImageController');
 const UpdateImageController = require('../controlers/Product/UpdateImageController');
+const DeleteImagemController = require('../controlers/Product/DeleteImageController');
 
 
 publicRouter.get('/products', AllProductControler);
@@ -18,5 +19,6 @@ privateRouter.delete('/products/:id', DeleteController);
 publicRouter.get('/products/:id/images', ListImageController);
 privateRouter.post('/products/:id/images', CreateImageController);
 privateRouter.put('/products/:id/images/:imageId', UpdateImageController);
+privateRouter.delete('/products/images/:id', DeleteImagemController);
 
 module.exports = [publicRouter, privateRouter];

@@ -1,4 +1,4 @@
-const Productmodel = require('../models/ProductModel');
+const ProductModel = require('../models/ProductModel');
 const ProductImageModel = require('../models/ProductImageModel');
 const ProductOptionModel = require('../models/ProductOptionModel');
 const CategoryModel = require('../models/CategoryModel')
@@ -6,7 +6,12 @@ const CategoryModel = require('../models/CategoryModel')
 Productmodel.hasMany(ProductImageModel, {
     foreignKey: 'product_id',
     as: 'images'
-})
+});
+
+ProductImageModel.belongsTo(ProductModel, {
+    foreignKey: 'product_id',
+    as: "products"
+});
 
 Productmodel.hasMany(ProductOptionModel, {
     foreignKey: 'product_id',

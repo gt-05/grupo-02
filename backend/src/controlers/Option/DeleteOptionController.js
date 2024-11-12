@@ -1,20 +1,30 @@
-const OptionModel =require ('../../models/ProductOptionModel');
 const ProductModel = require('../../models/ProductModel');
 const ProductOptionModel = require('../../models/ProductOptionModel');
 
-module.exports = async(request, response) => {
-    let options = await ProductOptionModel.findAll({
-        atributes: ['values'],
-        where: {
-            product_id: request.params.id
-        }
-    });
+module.exports = async (request, response) => {
+    let { id, OptionId } = request.params;
+    
 
-    let count = await OptionModel.destroy({
-        where: {
-            id: request.params.id
-        }
-    });
+    try {
 
-    return response.status(204).end();
-}
+        let product = await ProductModel.findOne({
+            where: { id }
+        });
+
+        
+
+        const deletedOption= await ProductOptionModel.destroy(
+                {
+                where: {
+                    product_id: id, 
+                    id: OptionId     
+                }
+            });
+
+
+            return response.status(204).end();
+        } catch (error) {
+            console.error(error);
+            return response.status(500).json({ message: 'Erro ao deletar opção de produto' });
+        }
+};

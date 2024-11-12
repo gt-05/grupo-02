@@ -1,6 +1,6 @@
 const ProductImageModel =require('../../models/ProductImageModel');
 const ProductModel = require('../../models/ProductModel');
-const { saveByUrl } = require('../../servises/Product-images');
+const { saveByUrl } = require('../../services/Product-images');
 
 module.exports = async (request, response) => {
     let {id, imageId} = request.params;
