@@ -4,7 +4,8 @@ import midias from '../assets/images/midias.svg';
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-900 text-white px-[80px] py-[30px] pt-[50px] flex flex-wrap justify-between w-ful text-white bg-black p-5">
+
+    <footer className="bg-gray-900 text-white p-8 flex flex-wrap justify-around w-ful text-left text-white bg-black p-5">
       {/* Logo e descrição */}
       <div className="mb-8 md:mb-0 w-80">
         <Logo color="white"/>

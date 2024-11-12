@@ -6,9 +6,9 @@ const ProductOptionModel = require('../models/ProductOptionModel');
 const UserModel = require('../models/UserModel');
 
 async function execute() {
-    await ProductModel.sync({alter: true});
+    await ProductModel.sync();
     await ProductImageModel.sync();
-    await CategoryModel.sync();
+    await CategoryModel.sync({alter: true });
     await ProductCategoryModel.sync();
     await ProductOptionModel.sync();
     await UserModel.sync();
