@@ -55,10 +55,10 @@ module.exports = async(request, response) => {
         for (let optionData of request.body.options) {
            
             options.push({
-                product_id: request.params.id,  
-                title: optionData.title,        
+                product_id: product.id,  
+                title: String(optionData.title),        
                 shape: optionData.shape,        
-                radius: optionData.radius,      
+                radius: isNaN(Number(optionData.radius)) ? 0 : Number(optionData.radius),      
                 type: optionData.type,          
                 values: optionData.values.join()
             });
