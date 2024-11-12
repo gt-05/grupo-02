@@ -3,11 +3,13 @@ const publicRouter = require('./Public-Routes');
 const AllCategoryController = require('../controlers/Category/AllCategoryController');
 const CreateCategoryController = require('../controlers/Category/CreateCategoryController');
 const UpdateCategoryController = require('../controlers/Category/UpdateCategoryController');
-const DeleteOptionsController = require('../controlers/Category/DeleteOptionsController');
+const DeleteOptionsController = require('../controlers/Category/DeleteCategoryController');
+const ListCategoryController = require('../controlers/Category/ListCategoryController');
 
-publicRouter.get('/category', AllCategoryController);
-privateRouter.post('/category', CreateCategoryController);
-privateRouter.put('/category/:id', UpdateCategoryController);
-privateRouter.delete('/category/:id', DeleteOptionsController);
+publicRouter.get('/categories', AllCategoryController);
+privateRouter.post('/categories', CreateCategoryController);
+privateRouter.put('/categories/:id', UpdateCategoryController);
+privateRouter.delete('/categories/:id', DeleteOptionsController);
+publicRouter.get('/categories', ListCategoryController);
 
 module.exports = [publicRouter, privateRouter];

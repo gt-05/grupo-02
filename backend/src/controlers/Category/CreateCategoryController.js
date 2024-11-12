@@ -1,5 +1,5 @@
 const CategoryModel = require('../../models/CategoryModel');
-const ProductCategoryModel = require('../../models/ProductCategoryModel');
+
 
 module.exports = async(request, response) => {
     let {
@@ -10,32 +10,16 @@ module.exports = async(request, response) => {
     let product;
     try {
         
-         category = await CategoryModel.create({
-            name, slug, price
+         product = await CategoryModel.create({
+            name, slug
         });
         
     } catch (error) {
         console.log(error.message);
         response.status(400);
         return response.json({
-            message: "Erro ao criar a categoria"
+            message: "Erro ao criar categoria"
         })
-    }
-    
-    let categorias = [];
-
-    try{
-
-     await ProductCategoryModel.bulkCreate(categorias);
-    response.status(201);
-    return response.json(category);
-
-    } catch (error) {
-        console.log(error.menssage);
-        response.status(400);
-        return response.json({
-            message: "Erro ao  salvar categorias no produto " + category.id
-        });
     }
 
 }
