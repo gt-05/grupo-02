@@ -12,6 +12,6 @@ allowNull: false
     }
 }, {
     tableName: 'category'
-}, {});
+});
 
 module.exports = CategoryModel;

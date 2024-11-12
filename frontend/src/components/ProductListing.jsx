@@ -23,10 +23,10 @@ function ProductListing({ maxNumber }) {
     }, []);
 
     return (
-        <div className="flex flex-wrap m-auto gap-[22px] justify-center">
+        <div className="flex flex-wrap m-auto justify-between">
             {products.slice(0, maxNumber).map((product, index) => {
                 let image = product.images[0]?.url ?? product.placeHolder_image;
-
+                
                 return (
                     <ProductCard
                         key={index}
@@ -36,6 +36,7 @@ function ProductListing({ maxNumber }) {
                         priceDiscount={product.price_with_discount}
                         alt={product.name} // Adicionando um alt para a imagem
                     />
+                    
                 );
             })}
         </div>

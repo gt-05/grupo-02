@@ -1,5 +1,3 @@
-import ProductListing from "../components/ProductListing.jsx"
-
 import Section from "../components/Section.jsx";
 
 import Layout from "../components/Layout.jsx";
@@ -10,18 +8,10 @@ export default function ProductListingPage() {
   return (
     <>
 
-      <Layout className="flex  min-h-screen">
-
-        <div className="flex place-content-around"> {/* Div de formatação pra ajustar "ProductcheckBox ao lado da section"*/}
-
+      <Layout className="flex min-h-screen">
           <Section>
-            <div className="flex gap-[25px]">
-            <ProductCheckBox />
-            <ProductListing/>
-            </div>
+              <ProductCheckBox />
           </Section>
-        </div>
-
       </Layout>
     </>
   )

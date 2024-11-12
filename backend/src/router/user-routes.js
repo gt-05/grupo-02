@@ -8,7 +8,7 @@ const updateUserController = require('../controlers/User/UpdateUserController');
 const deleteUserController = require('../controlers/User/DeleteUserController');
 
 publicRouter.get('/users', AllUserControler);
-privateRouter.post('/users', encriptPassword, CreateController);
+publicRouter.post('/users', encriptPassword, CreateController);
 publicRouter.post('/users/token', creatTokenController);
 privateRouter.put('/users/:id', updateUserController);
 privateRouter.delete('/users/:id', deleteUserController);

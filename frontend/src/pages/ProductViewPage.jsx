@@ -43,7 +43,7 @@ export default function ProductViewPage() {
           "href": "https://redirect.link"
         }
       }>
-      <ProductListing />
+      <ProductListing maxNumber='8'/>
       </Section>
             </div>
         </Layout>
