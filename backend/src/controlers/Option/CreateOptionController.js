@@ -1,33 +1,45 @@
-const ProductOptionModel = require('../../models/ProductOptionModel');
 const ProductModel = require('../../models/ProductModel');
+const ProductOptionModel = require('../../models/ProductOptionModel');
 
-
-module.exports = async(request, response) => {
-    
-    let product = await ProductModel.findOne({
-        where: {
-            id: request.params.id
-        }
-    })
-
-    let options = []
+module.exports = async (request, response) => {
     try {
-        for(let url of request.body) {
-        let option = saveByUrl({url, slug: product.slug});
-        options.push({
-            product_id: request.params.id,
-            values: (await option).relativeValues
-        })
-    }
-    } catch(error) {
-        response.status(400);
-        return response.json({
-            message: error.message
-        });
-    }
+        const { id } = request.params;
+        const { options: optionDataArray } = request.body;
 
-    options = await ProductOptionModel.bulkCreate(options);
-    response.status(201);
+        const product = await ProductModel.findOne({ where: { id } });
+        if (!product) {
+            return response.status(404).json({ error: 'Produto não encontrado' });
+        }
 
-    return response.json(options);
-}
+        let updatedOptionsCount = 0; 
+        for (let optionData of optionDataArray) {
+            
+            const optionDataToUpdate = {
+                product_id: product.id,  
+                title: String(optionData.title),  
+                shape: optionData.shape,
+                radius: isNaN(Number(optionData.radius)) ? 0 : Number(optionData.radius), 
+                type: optionData.type,
+                values: optionData.values,
+            };
+
+            const [updated] = await ProductOptionModel.update(optionDataToUpdate, {
+                where: { id: optionData.id }  
+            });
+
+            if (updated > 0) {
+                updatedOptionsCount++;
+            }
+        }
+
+        if (updatedOptionsCount === 0) {
+            return response.status(404).json({ error: 'Nenhuma opção de produto foi atualizada' });
+        }
+
+        return response.status(200).json({ message: `${updatedOptionsCount} opção(s) de produto(s) atualizada(s) com sucesso` });
+
+    } catch (error) {
+        console.error('Erro ao atualizar opções do produto:', error);
+        return response.status(500).json({ error: 'Erro ao atualizar as opções do produto' });
+    }
+};

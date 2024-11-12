@@ -17,7 +17,7 @@ export default function CardMine() {
     return (
         <div className="flex items-center ">
             
-            <div className="  w-screen justify-between mx-32">
+            <div className="w-screen justify-between mx-32">
                 <div className="flex justify-center gap-[10px]" style={css}>
                     {imgs.map((img, index) => {
                        return <img key={index} src={img.src} alt={`Coleção ${index + 1}`} className="w-[405px]" />
@@ -27,4 +27,3 @@ export default function CardMine() {
         </div>
     );
 }
-

@@ -3,8 +3,8 @@ import Layout from "../components/Layout.jsx";
 import Laye from "../components/Laye.jsx";
 import ProductListing from "../components/ProductListing.jsx";
 import Section from "../components/Section.jsx";
-import Colecao from "../components/ColecaoDestaque.jsx";
-import CardMine from "../components/Colecao.jsx"
+import ColecaoDestaque from "../components/ColecaoDestaque.jsx";
+import CardMine from "../components/CardMine.jsx"
 
 export default function Home() {
     return (
@@ -17,7 +17,7 @@ export default function Home() {
             <Section
             title="Coleções em destaque"
             titleAlign="center">
-                <Colecao />
+                <ColecaoDestaque />
             </Section>
             <Section
                 title="Produtos em alta"
