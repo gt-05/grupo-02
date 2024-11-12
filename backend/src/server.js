@@ -23,7 +23,7 @@ const propsOptions = require('./router/option-routes');
 app.use(userRoutes);
 app.use(propsRoutes);
 app.use(propsOptions);
-
+app.use(categoryRoutes);
 
 
 app.listen(3000, () => {
