@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom'; // Importando NavLink
 import Logo from "./Logo.jsx";
 import midias from '../assets/images/midias.svg';
 
-const Footer = () => {
+function Footer  () {
   return (
     <footer className="bg-dark_gray text-white p-8 flex flex-wrap justify-around w-ful text-left text-white bg-dark_gray p-5">
       {/* Logo e descrição */}
@@ -51,4 +51,6 @@ const Footer = () => {
         <p className="text-white">(85) 3051-3411</p>
       </div>
     </footer>
-)}
+)} 
+
+export default Footer;
