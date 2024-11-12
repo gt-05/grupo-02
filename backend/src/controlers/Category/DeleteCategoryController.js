@@ -1,6 +1,6 @@
 const CategoryModel = require('../../models/CategoryModel');
 const ProductCategoryModel = require("../../models/ProductCategoryModel");
-const { deleteMany } = require('../../servises/Product-images');
+
 
 module.exports = async(request, response) => {
     let categorias = await ProductCategoryModel.findAll({

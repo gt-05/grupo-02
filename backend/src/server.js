@@ -20,6 +20,8 @@ const propsRoutes = require('./router/product-routes');
 
 const propsOptions = require('./router/option-routes');
 
+const categoryRoutes = require('./router/category-routes');
+
 app.use(userRoutes);
 app.use(propsRoutes);
 app.use(propsOptions);
