@@ -14,8 +14,11 @@ const userRoutes = require('./router/user-routes');
 
 const propsRoutes = require('./router/product-routes');
 
+const categoryRoutes = require('./router/category-routes');
+
 app.use(userRoutes);
 app.use(propsRoutes);
+app.use(categoryRoutes);
 
 
 

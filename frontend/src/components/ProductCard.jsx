@@ -9,7 +9,7 @@ function ProductCard(props) {
                 <img src={props.image} alt="" />
             </div>
             <div className="w-[292px] mt-[17px]">
-                <span className="w-[292px] text-[14px]">Tênis</span>
+                <div className="w-[292px] text-[14px]">Tênis</div>
                 <span className="w-[292px] text-[28px]">{props.name}</span>
                 <div className="w-[292px] text-[22px]">
                     <span className="line-through text[]">{props.price}</span>

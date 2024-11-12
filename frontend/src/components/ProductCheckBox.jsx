@@ -4,16 +4,17 @@ function ProductCheckBox(){
     return (
         <>
         <div>
-            <div className="flex justify-between">
-                <span>
-                    Resultados para Tênis - 389 produtos
+            <div className="flex justify-between my-[30px]">
+                <span className="self-center text-[18.7px]">
+                    <b>Resultados para "Tênis" - </b>389 produtos
                 </span>
-                <span>
-                    Ordenar por: mais relevantes
+                <span className="flex border-[2px] p-[15px] gap-x-12 text-[18.7px]">
+                    <span><b>Ordenar por:</b> mais relevantes</span>
+                    <img src="./src/assets/images/arrowDown.svg" />
                 </span>
             </div>
             <div className="flex">
-                <div className="bg-[white] min-w-[308px] h-[750px] px-[30px] py-[30px] rounded"> {/* Div Principal engloba tudo */}
+                <div className="bg-[white] min-w-[308px] h-[750px] px-[30px] py-[30px] mr-[30px] rounded"> {/* Div Principal engloba tudo */}
                     <form action="" className="">
 
                     <div className="pb-[20px] border-b-[1px] border-[#CCCCCC] font-bold text-[#474747] text-[16px]"> {/* Div do nome "Filtrar por" */}
