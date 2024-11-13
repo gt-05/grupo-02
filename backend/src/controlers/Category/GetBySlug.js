@@ -1,12 +1,15 @@
-const Categorymodel = require('../../models/CategoryModel');
-
+const CategoryModel = require('../../models/CategoryModel');
 
 module.exports = async (request, response) => {
-    let categorys = await Categorymodel.findAll({
+    let products = await CategoryModel.findAll({
         where: {
             slug: request.params.slug
+        },
+        include: {
+            attributes: ['id', 'url', 'path'],
+            as: 'category'
         }
     });
 
-    return response.json(categorys);
+    return response.json(products);
 }
