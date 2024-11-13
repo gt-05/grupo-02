@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom'; // Importando NavLink
 import Logo from "./Logo.jsx";
 import midias from '../assets/images/midias.svg';
 
-function Footer  () {
+function Footer() {
   return (
     <footer className="bg-dark_gray text-white p-8 flex flex-wrap justify-around w-ful text-left text-white bg-dark_gray p-5">
       {/* Logo e descrição */}
@@ -22,26 +22,26 @@ function Footer  () {
       {/* Informação */}
       <div className="mb-8 md:mb-0">
         <h4 className="text-xl font-semibold mb-2">Informação</h4>
-        <ul className="space-y-2">
-          <li><NavLink to="/sobre" className="text-white hover:text-dark_gray_2">Sobre Drip Store</NavLink></li>
-          <li><NavLink to="/seguranca" className="text-white hover:text-dark_gray_2">Segurança</NavLink></li>
-          <li><NavLink to="/wishlist" className="text-white hover:text-dark_gray_2">Wishlist</NavLink></li>
-          <li><NavLink to="/blog" className="text-white hover:text-dark_gray_2">Blog</NavLink></li>
-          <li><NavLink to="/trabalhe-conosco" className="text-white hover:text-dark_gray_2">Trabalhe conosco</NavLink></li>
-          <li><NavLink to="/meus-pedidos" className="text-white hover:text-dark_gray_2">Meus Pedidos</NavLink></li>
-        </ul>
+        <nav>
+          <NavLink to="/sobre" className="text-white hover:text-dark_gray_2 block mb-2">Sobre Drip Store</NavLink>
+          <NavLink to="/seguranca" className="text-white hover:text-dark_gray_2 block mb-2">Segurança</NavLink>
+          <NavLink to="/wishlist" className="text-white hover:text-dark_gray_2 block mb-2">Wishlist</NavLink>
+          <NavLink to="/blog" className="text-white hover:text-dark_gray_2 block mb-2">Blog</NavLink>
+          <NavLink to="/trabalhe-conosco" className="text-white hover:text-dark_gray_2 block mb-2">Trabalhe conosco</NavLink>
+          <NavLink to="/meus-pedidos" className="text-white hover:text-dark_gray_2 block mb-2">Meus Pedidos</NavLink>
+        </nav>
       </div>
 
       {/* Categorias */}
       <div className="mb-8 md:mb-0">
         <h4 className="text-xl font-semibold mb-2">Categorias</h4>
-        <ul className="space-y-2">
-          <li><NavLink to="/categorias/camisetas" className="text-white hover:text-dark_gray_2">Camisetas</NavLink></li>
-          <li><NavLink to="/categorias/calcas" className="text-white hover:text-dark_gray_2">Calças</NavLink></li>
-          <li><NavLink to="/categorias/bonés" className="text-white hover:text-dark_gray_2">Bonés</NavLink></li>
-          <li><NavLink to="/categorias/headphones" className="text-white hover:text-dark_gray_2">Headphones</NavLink></li>
-          <li><NavLink to="/categorias/tenis" className="text-white hover:text-dark_gray_2">Tênis</NavLink></li>
-        </ul>
+        <nav>
+          <NavLink to="/categorias/camisetas" className="text-white hover:text-dark_gray_2 block mb-2">Camisetas</NavLink>
+          <NavLink to="/categorias/calcas" className="text-white hover:text-dark_gray_2 block mb-2">Calças</NavLink>
+          <NavLink to="/categorias/bonés" className="text-white hover:text-dark_gray_2 block mb-2">Bonés</NavLink>
+          <NavLink to="/categorias/headphones" className="text-white hover:text-dark_gray_2 block mb-2">Headphones</NavLink>
+          <NavLink to="/categorias/tenis" className="text-white hover:text-dark_gray_2 block mb-2">Tênis</NavLink>
+        </nav>
       </div>
 
       {/* Contato */}
@@ -51,6 +51,7 @@ function Footer  () {
         <p className="text-white">(85) 3051-3411</p>
       </div>
     </footer>
-)} 
+  );
+}
 
 export default Footer;
