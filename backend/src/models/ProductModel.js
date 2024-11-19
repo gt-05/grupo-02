@@ -17,7 +17,7 @@ const ProductModel = connection.define("ProductModel", {
     },
     description: DataTypes.TEXT,
     price_with_discount: DataTypes.DECIMAL(5, 2),
-    enabbled: {
+    enabled: {
         type: DataTypes.BOOLEAN,
         defaultValue: 0,
         allowNull: false
@@ -30,7 +30,7 @@ const ProductModel = connection.define("ProductModel", {
     placeholder_image: {
         type: DataTypes.VIRTUAL,
         get() {
-            return getPublicUrl("placeholder/placeholder-01.jpeg")
+            return getPublicUrl("placeholder.png")
         }
     }
         
