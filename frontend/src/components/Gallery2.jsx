@@ -16,6 +16,7 @@ export default function Gallery() {
     ];
 
     function handlerSlide(direction) {
+        
         if (direction === 'next') {
             let position = current + 100;
             setCurrent(position > (imgs.length - 1) * 100 ? 0 : position);
