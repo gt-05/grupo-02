@@ -1,9 +1,15 @@
 import { useEffect, useState } from "react";
 import ProductCard from "./ProductCard.jsx";
 
-function ProductListing({ maxNumber }) {
-    const url = 'https://raw.githubusercontent.com/gt-05/.github/refs/heads/main/db.json';
+function ProductListing() {
     const [products, setProducts] = useState([]);
+    useEffect(function (){
+        fetch("http://localhost:3000/products").then(response => response.json())
+        .then(body => {
+            console.log(body)
+            setProducts(body)
+        })
+    },[])
 
     useEffect(() => {
         const fetchProducts = async () => {
@@ -23,18 +29,18 @@ function ProductListing({ maxNumber }) {
     }, []);
 
     return (
-        <div className="flex flex-wrap m-auto justify-between">
-            {products.slice(0, maxNumber).map((product, index) => {
-                let image = product.images[0]?.url ?? product.placeHolder_image;
+        <div className="flex flex-wrap m-[6px] justify-between">
+            {products.slice(0, 4).map((product) => {
+               
                 
                 return (
                     <ProductCard
-                        key={index}
-                        image={image}
-                        name={product.name}
-                        price={product.price}
-                        priceDiscount={product.price_with_discount}
-                        alt={product.name} // Adicionando um alt para a imagem
+                    key={product.id}
+                    images={product.images[0]}
+                    name={product.name}
+                    price={product.price}
+                    priceDiscount={product.price_with_discount}
+                    slug={product.slug}
                     />
                     
                 );

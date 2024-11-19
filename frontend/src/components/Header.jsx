@@ -28,7 +28,7 @@ function Header (){
                 ? "font-bold underline text-primary" : "text-normal hover:font-bold hover:underline hover:text-primary" }> Produtos </NavLink>
                 <NavLink to="/categories" className={({isActive}) => isActive 
                 ? "font-bold underline text-primary" : "text-normal hover:font-bold hover:underline hover:text-primary" }> Categorias </NavLink>
-                <NavLink to="/my-orders" className={({isActive}) => isActive 
+                <NavLink to="/my-orderings" className={({isActive}) => isActive 
                 ? "font-bold underline text-primary" : "text-normal hover:font-bold hover:underline hover:text-primary" }>Meus Pedidos </NavLink>
                 </nav>
             </div>

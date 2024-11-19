@@ -12,7 +12,7 @@ export default createBrowserRouter (
         <>
             <Route path='/' element={<Home />}/>
             <Route path='/products' element={<ProductListingPage/>}/>
-            <Route path='/productsView' element={<ProductViewPage/>}/>
+            <Route path='/p/:slug' element={<ProductViewPage/>}/>
         </>
     ) )
 
