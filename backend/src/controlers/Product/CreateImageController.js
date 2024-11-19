@@ -1,35 +1,32 @@
-const ProductImageModel = require('../../models/ProductImageModel');
-const ProductModel = require('../../models/ProductModel');
-const { saveByUrl } = require('../../services/Product-images');
+const ProductImageModel = require("../../models/ProductImageModel");
+const ProductModel = require("../../models/ProductModel");
+const {saveByUrl} = require('../../services/product-images');
 
 module.exports = async (request, response) => {
+
     let product = await ProductModel.findOne({
         where: {
             id: request.params.id
         }
-    });
+    })
 
-    if (!product) {
-        return response.status(404).json({
-            message: "Produto não encontrado"
-        });
-    }
-
-    let images = [];
+    let images = []
     try {
-        for (let url of request.body) {
-            let image = await saveByUrl({ url, slug: product.slug });
+        for(let url of request.body) {
+            let image = await saveByUrl({url, slug: product.slug});
             images.push({
                 product_id: request.params.id,
                 path: image.relativePath
             });
         }
-
-        await ProductImageModel.bulkCreate(images);
-    } catch (error) {
-        return response.status(400).json({
-            message: `Erro ao salvar imagens: ${error.message}`
+    } catch(error) {
+        response.status(400);
+        return response.json({
+            message: error.message
         });
     }
 
-};
+    images = await ProductImageModel.bulkCreate(images);
+    response.status(201);
+    return response.json(images)
+}
