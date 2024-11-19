@@ -19,8 +19,8 @@ ProductModel.hasMany(ProductOptionModel, {
 })
 
 ProductModel.belongsToMany(CategoryModel, {
-    foreignKey: "category_id",
-    otherKey: "product_id",
+    foreignKey: "product_id",
+    otherKey: "category_id",
     through: 'product_category',
     as: 'categories',
     timestamps: false

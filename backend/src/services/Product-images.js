@@ -1,18 +1,18 @@
 const path = require('path');
 const fs = require('fs');
 
-const saveByUrl = async({url, filename, slug}) => {
+const saveByUrl = async ({url, filename, slug}) => {
     filename = !filename ? Math.random().toString(16).slice(2) : filename;
 
-    let response = await fetch(url);
-    let mimeType = response.headers.get("content-type");
+    let respose = await fetch(url);
+    let mimeType = respose.headers.get("content-type");
 
     if(!['image/png', 'image/jpeg', 'image/jpg', 'image/webp'].includes(mimeType)) {
-        throw new Error("Envie apenas images png, jpeg, jpg ou webp")
+        throw new Error("Envie apenas imagens png, jpeg, jpg ou webp");
     }
 
     let extension = mimeType.split('/').pop();
-    let content = Buffer.from(await response.arrayBuffer());
+    let content = Buffer.from(await respose.arrayBuffer());
     let directory = path.resolve(`${process.env.UPLOAD_BASE_DIR}/${slug}`);
 
     if(!fs.existsSync(directory)) {
@@ -22,11 +22,9 @@ const saveByUrl = async({url, filename, slug}) => {
     let file = `${directory}/${filename}.${extension}`;
     fs.writeFileSync(file, content);
 
-
     return {
         relativePath: `${slug}/${filename}.${extension}`
     }
-
 }
 
 const deleteSingle = (relativePath) => {
@@ -36,15 +34,14 @@ const deleteSingle = (relativePath) => {
         fs.rmSync(file);
         return true;
     }
-    return  false;
-
+    return false;
 }
 
 const deleteMany = (relativePaths) => {
     for(let relativePath of relativePaths) {
         deleteSingle(relativePath);
     }
-}
+}   
 
 module.exports = {
     saveByUrl, deleteSingle, deleteMany
