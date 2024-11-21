@@ -7,7 +7,7 @@ const deleteOptionController = require('../controlers/Option/DeleteOptionControl
 const ListOptionController = require('../controlers/Option/ListOptionController');
 
 publicRouter.get('/products/:id/options', AllOptionControler);
-privateRouter.post('/products/:id/options/:OptionId', CreateOptionController);
+privateRouter.post('/products/:id/options/', CreateOptionController);
 privateRouter.put('/products/:id/options/:OptionId', updateOptionController);
 privateRouter.delete('/products/:id/options/:OptionId', deleteOptionController);
 publicRouter.get('/products/:id/options/:OptionId',ListOptionController);
