@@ -11,7 +11,7 @@ function Header (){
             <Logo />
                 <input type="text" placeholder="Pesquisar produto..." className="bg-light_gray_3 rounded-[4px] p-[8px] w-[550px]"/>
                 <div className="flex items-center pl-[24px] ">
-                <a href="#" className="text-[16px] text-dark_gray_2 underline">Cadastre-se</a>
+                <NavLink to="/" className="text-[16px] text-dark_gray_2 underline"> Cadastre-se </NavLink>
                 </div>
                 <button className="bg-primary w-[144px] h-[40px] rounded-[4px] font-bold text-white text-[14px]" >Entrar</button>
                 <div className="pl-[40px] relative">

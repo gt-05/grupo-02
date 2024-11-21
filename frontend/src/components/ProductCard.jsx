@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom";
 function ProductCard(props) {
     return(
         <>
-        <NavLink to={`p/` + (props.slug)}>
+        <NavLink to={`/p/` + (props.slug)}>
 
         <div>
             <div className="h-[321px] relative w-[292px] bg-[white]">

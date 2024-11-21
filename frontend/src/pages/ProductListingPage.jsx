@@ -2,7 +2,7 @@ import Section from "../components/Section.jsx";
 
 import Layout from "../components/Layout.jsx";
 
-import ProductCheckBox from "../components/ProductCheckBox.jsx";
+import FilterGroup from "../components/FilterGroup.jsx";
 
 export default function ProductListingPage() {
   return (
@@ -10,7 +10,7 @@ export default function ProductListingPage() {
 
       <Layout className="flex min-h-screen">
           <Section>
-              <ProductCheckBox />
+              <FilterGroup />
           </Section>
       </Layout>
     </>
