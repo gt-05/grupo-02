@@ -9,7 +9,7 @@ import CardMine from "../components/CardMine.jsx"
 export default function Home() {
     return (
         <Layout >
-            <Gallery />
+            <Gallery  hidden="hidden"/>
             <Section
             title="Coleções em destaque">
                 <CardMine/>

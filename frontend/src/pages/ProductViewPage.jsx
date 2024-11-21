@@ -1,6 +1,6 @@
 import React from 'react';
 import ProductListing from "../components/ProductListing.jsx";
-import Gallery from "../components/Gallery2.jsx";
+import Gallery from "../components/Gallery.jsx";
 import MenuNavegacao from "../components/MenuNavegacao.jsx";
 import Section from "../components/Section.jsx";
 import Layout from "../components/Layout.jsx";
@@ -14,8 +14,8 @@ export default function ProductViewPage() {
     return (
         <Layout className="flex flex-col min-h-screen">   
             <MenuNavegacao />     
-            <div className="flex mb-6"> {/* Aumentando a margem inferior para evitar sobreposição */}
-                <div className="flex-grow">
+            <div className="flex mb-12"> {/* Aumentando a margem inferior para evitar sobreposição */}
+                <div className="flex-grow flex-grow h-[500px] w-[570px]">
                     <Gallery className="h-96 overflow-hidden" /> {/* Defina uma altura fixa */}
                 </div>
                 <div className="ml-4 w-1/3"> {/* Ajuste a largura aqui */}
