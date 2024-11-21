@@ -28,7 +28,7 @@ export default function Home() {
                     color: "#C92071"
                 }}>
                 <ProductListing
-                maxNumber='8' />
+                maxNumber='12' />
             </Section>
             <Laye />
         </Layout>

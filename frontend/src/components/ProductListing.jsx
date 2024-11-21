@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import ProductCard from "./ProductCard.jsx";
 
-function ProductListing() {
+function ProductListing(props) {
     const [products, setProducts] = useState([]);
     useEffect(function (){
         fetch("http://localhost:3000/products").then(response => response.json())
@@ -10,38 +10,19 @@ function ProductListing() {
         })
     },[])
 
-    useEffect(() => {
-        const fetchProducts = async () => {
-            try {
-                const response = await fetch(url);
-                if (!response.ok) {
-                    throw new Error('Erro ao buscar produtos');
-                }
-                const data = await response.json();
-                setProducts(data.products);
-            } catch (error) {
-                console.error(error);
-            }
-        };
-
-        fetchProducts();
-    }, []);
-
     return (
         <div className="flex flex-wrap m-[6px] justify-between">
-            {products.slice(0, 4).map((product) => {
-               
-                
+            {products.slice(0, props.maxNumber).map((product) => {
                 return (
                     <ProductCard
                     key={product.id}
-                    images={product.images[0]}
+                    image={product.images[0]}
+                    imagePlaceholder={product.placeholder_image}
                     name={product.name}
                     price={product.price}
                     priceDiscount={product.price_with_discount}
                     slug={product.slug}
                     />
-                    
                 );
             })}
         </div>
