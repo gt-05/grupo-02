@@ -19,7 +19,7 @@ const ProductOptions = ({ sizes = [], colors = [], radius = '0', shape }) => {
         {sizes.map((size, index) => {
           const isSelected = selectedSize === size;
           const baseClasses = `flex justify-center items-center cursor-pointer transition duration-200 ${
-            isSelected ? 'bg-[#C92071] border-primary border-2' : 'border-light-gray-2 border'
+            isSelected ? 'bg-primary border-primary border-2' : 'border-light_gray_2 border'
           }`;
           
           return (
@@ -46,7 +46,7 @@ const ProductOptions = ({ sizes = [], colors = [], radius = '0', shape }) => {
           <div
             key={index}
             className={`w-8 h-8 rounded-full cursor-pointer border-2 transition duration-200 ${
-              selectedColor === color ? 'border-primary' : 'border-light-gray-2'
+              selectedColor === color ? 'border-primary' : 'border-light_gray_2'
             }`}
             style={{ backgroundColor: color }}
             onClick={() => handleColorClick(color)}
