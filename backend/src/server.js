@@ -6,8 +6,7 @@ const imagePlaceHolder = require('./middears/image-placeholder');
 const app = express();
 require('./database/association');
 
-var helmet = require('helmet');
-app.use(helmet());
+
 app.disable('x-powered-by');
 
 app.use(cors());
